@@ -1,2 +1,2 @@
 # portfolio-datos
-Proyectos de análisis de datos - FashionStore y TechBA
+Proyectos de análisis de datos - FashionStore, TechBA
