@@ -1,0 +1,207 @@
+empleado_id,nombre,apellido,email,telefono,fecha_nacimiento,fecha_ingreso,depto_id,puesto_id,estado
+E1200,Hernán,Núñez,hernan.nunez@techba.com,11-9491-4974,23/10/1997,2019/07/08,D09,P18,activo
+E1058,Antonella,Benítez,antonella.benitez@techba.com,11-8227-9595,04/05/1994,2024-04-10,D04,P10,activo
+E1185,Diego,Acosta,diego.acosta@techba.com,11-3227-3695,1985-09-15,07/11/2018,D12,P12,activo
+E1131,Pilar,Ríos,pilar.rios@techba.com,11-2668-7142,1982-01-11,21-12-2018,D06,P13,activo
+E1020,  Ariel  ,Gutiérrez,ariel.gutierrez@techba.com,11-3955-5351,22-03-1987,15-05-2023,D06,P13,activo
+E1183,Micaela,Herrera,micaela.herrera@techba.com,11-3795-3188,1990/03/15,12-10-2023,D07,P16,activo
+E1186,Agustina,Martínez,agustina.martinez@techba.com,11-5714-3161,15-07-1991,2022/01/18,D08,P20,activo
+E1002,Ezequiel,López,ezequiel.lopez@techba.com,11-8594-6168,03-05-1987,23-10-2019,D06,P13,activo
+E1033,Paula,Romero,paula.romero@techba.com,11-3571-7888,1996-07-22,20-03-2023,D10,P19,activo
+E1031,Bruno,Carrasco,bruno.carrasco@techba.com,11-3557-5173,1976/12/14,2018-09-26,D09,P17,activo
+E1157,Aldana,Gómez,aldana.gomez@techba.com,11-3671-6573,11-03-1994,11/12/2024,D12,P12,inactivo
+E1171,Ezequiel,Ortiz,ezequiel.ortiz@techba.com,11-6571-5890,25-05-1982,07/12/2020,D12,P12,activo
+E1035,Agustina,Álvarez,AGUSTINA.ALVAREZ@TECHBA.COM,11-7397-2389,1984/09/22,11-10-2023,D02,P05,activo
+E1028,  Bruno  ,López,BRUNO.LOPEZ@TECHBA.COM,11-9033-8711,1982/04/27,10-06-2021,D04,P10,activo
+E1132,Carla,Núñez,carla.nunez@techba.com,11-7702-3273,1999/12/16,01/10/2021,D02,P05,activo
+E1192,Ezequiel,Jiménez,ezequiel.jimenez@techba.com,11-2551-2653,1994-01-15,2022/11/23,D01,P02,activo
+E1101,  Rocío  ,Ferreira,rocio.ferreira@techba.com,11-6959-8048,04/12/1978,21-11-2024,D09,P17,activo
+E1059,Marcos,Acosta,marcos.acosta@techba.com,11-3036-5494,18/01/1976,2020/12/05,D11,P20,activo
+E1107,Camila,Torres,camila.torres@techba.com,11-8070-1502,17-12-1977,14-07-2019,D08,P20,activo
+E1102,  Cristian  ,Flores,cristian.flores@techba.com,11-8778-8430,24-07-1987,14-06-2018,D06,P14,activo
+E1027,Martín,Álvarez,martin.alvarez@techba.com,11-9997-3900,06/01/1988,26/06/2023,D07,P15,activo
+E1034,Franco,Vargas,franco.vargas@techba.com,11-3721-8043,2000-10-20,15-06-2023,D08,P20,activo
+E1116,Ramiro,Morales,ramiro.morales@techba.com,11-3421-3504,03-11-1999,2019-11-16,D08,P20,activo
+E1087,Iván,Pérez,ivan.perez@techba.com,11-9400-1645,02/08/1984,24-06-2022,D03,P08,inactivo
+E1012,Ailén,Cabrera,ailen.cabrera@techba.com,11-3755-9834,1979-12-19,2022-08-08,D08,P20,activo
+E1095,Ignacio,Gómez,ignacio.gomez@techba.com,11-2750-4475,1995/11/20,2018/01/26,D06,P13,inactivo
+E1073,  Camila  ,Herrera,camila.herrera@techba.com,11-8892-2858,21/02/1989,2024/03/16,D12,P12,activo
+E1130,Ramiro,Vera,ramiro.vera@techba.com,11-9416-9410,03/07/1979,2019/08/12,D01,P04,activo
+E1074,  Daniela  ,Núñez,daniela.nunez@techba.com,11-5868-4993,1989/09/05,20-04-2021,D09,P17,inactivo
+E1094,Julieta,Vera,julieta.vera@techba.com,11-5642-4868,1986/02/22,2020/09/21,D06,P13,activo
+E1066,  Tomás  ,Ramos,tomas.ramos@techba.com,11-6874-5728,15-02-1989,23/05/2023,D07,P16,activo
+E1090,Camila,Molina,camila.molina@techba.com,11-2114-5332,1992/02/15,24/11/2020,D11,P20,activo
+E1025,Nicolás,Torres,nicolas.torres@techba.com,11-6469-1590,1986-10-18,2019/07/05,D01,P03,activo
+E1004,  Micaela  ,Herrera,micaela.herrera@techba.com,11-3133-9348,25/02/1990,05-02-2018,D11,P20,activo
+E1176,Catalina,Vargas,catalina.vargas@techba.com,11-7291-1969,21-02-1999,2022-04-18,D12,P11,inactivo
+E1173,Cecilia,Rodríguez,CECILIA.RODRIGUEZ@TECHBA.COM,11-4837-8247,24/05/1995,07/04/2021,D09,P18,inactivo
+E1088,Gabriela,Suárez,gabriela.suarez@techba.com,11-3438-4289,12/09/1979,09-09-2022,D03,P09,inactivo
+E1053,Ramiro,Vera,ramiro.vera@techba.com,11-3997-8613,22/10/1993,01-06-2021,D08,P20,activo
+E1091,Sofía,Herrera,sofia.herrera@techba.com,11-5862-1410,11/09/1994,21/04/2022,D02,P07,activo
+E1054,Maximiliano,Castro,maximiliano.castro@techba.com,11-4788-5581,09/12/1994,2022/01/17,D04,P10,activo
+E1014,Agustina,Pérez,agustina.perez@techba.com,11-4036-4139,1981/09/15,06-07-2019,D05,P12,activo
+E1110,Emilia,Ramos,emilia.ramos@techba.com,11-2372-4612,02/10/1987,10/04/2018,D04,P10,activo
+E1148,Ailén,Mendoza,ailen.mendoza@techba.com,11-7812-2063,1992/09/10,23-03-2020,D12,P11,activo
+E1154,  Diego  ,Benítez,diego.benitez@techba.com,11-3263-3804,1996-10-24,2022/06/27,D10,P19,activo
+E1170,Sebastián,Acosta,sebastian.acosta@techba.com,11-4804-9950,1986-11-25,22-12-2024,D11,P20,activo
+E1050,Jimena,Rojas,jimena.rojas@techba.com,11-8598-2983,2000/10/26,18/06/2018,D07,P16,activo
+E1119,Rocío,Benítez,rocio.benitez@techba.com,11-6540-1672,1989/10/21,20-06-2019,D08,P20,inactivo
+E1172,Paula,Ortiz,paula.ortiz@techba.com,11-4357-2996,1993/11/18,27/07/2021,D06,P13,activo
+E1006,Tatiana,Flores,tatiana.flores@techba.com,11-2913-5808,1988/03/15,24-12-2018,D05,P11,activo
+E1168,Agustín,Carrasco,agustin.carrasco@techba.com,11-9767-2800,1981-01-15,2020/07/05,D07,P15,activo
+E1011,  Diego  ,Herrera,diego.herrera@techba.com,11-2058-2163,1997-11-02,2019-02-02,D06,P13,activo
+E1086,Pablo,Rojas,pablo.rojas@techba.com,11-8104-9138,20/04/1984,08-06-2024,D11,P20,activo
+E1195,Paula,Cabrera,paula.cabrera@techba.com,11-2384-6642,13/11/1995,11/09/2024,D12,P12,activo
+E1189,Rocío,Ríos,rocio.rios@techba.com,11-5077-2314,1996-11-28,21/03/2022,D06,P13,activo
+E1067,Rocío,Rodríguez,rocio.rodriguez@techba.com,11-6899-1653,1988/12/11,01-05-2022,D02,P05,inactivo
+E1096,Nicolás,Ponce,NICOLAS.PONCE@TECHBA.COM,11-3697-4538,25/06/1982,01-10-2019,D05,P11,inactivo
+E1022,Lorena,Ibáñez,lorena.ibanez@techba.com,11-2064-5905,05/02/1996,04-02-2020,D12,P11,activo
+E1097,Agustina,Ruiz,agustina.ruiz@techba.com,11-2900-1422,12-01-1979,19/04/2024,D06,P13,activo
+E1032,Ariel,Flores,ariel.flores@techba.com,11-7104-6143,1996/02/24,10-09-2020,D11,P20,activo
+E1179,Rodrigo,Álvarez,rodrigo.alvarez@techba.com,11-7989-8518,1995/05/23,24-01-2019,D06,P14,activo
+E1164,Emilia,López,emilia.lopez@techba.com,11-2371-1637,1979/12/11,17/08/2024,D08,P20,activo
+E1181,Matías,Castro,matias.castro@techba.com,11-5142-4858,1989-05-11,2020/10/24,D10,P19,activo
+E1065,Pablo,Castro,pablo.castro@techba.com,11-8453-4241,1988-02-18,2019-11-05,D05,P11,activo
+E1077,Martín,Suárez,martin.suarez@techba.com,11-2357-6213,23-08-1998,2024/07/13,D11,P20,activo
+E1084,Valeria,Ramos,valeria.ramos@techba.com,11-7234-7951,1997/05/15,07-05-2024,D07,P16,activo
+E1193,Rocío,Herrera,rocio.herrera@techba.com,11-6421-4559,05/01/1999,2022-05-08,D12,P12,activo
+E1177,Cristian,Ruiz,cristian.ruiz@techba.com,11-9650-1595,1987/08/06,2023/05/02,D01,P03,activo
+E1093,Ailén,Acosta,ailen.acosta@techba.com,11-5433-3531,04/11/1988,2024/08/20,D07,P16,activo
+E1120,Sofía,Flores,sofia.flores@techba.com,11-7851-2381,1991-11-06,2018-04-23,D08,P20,activo
+E1075,Tatiana,Suárez,tatiana.suarez@techba.com,11-4784-9318,1983-01-10,2023-05-27,D10,P19,inactivo
+E1114,Ezequiel,Peralta,ezequiel.peralta@techba.com,11-6824-7560,13-02-1991,2024/05/24,D06,P13,activo
+E1038,Valentina,Ponce,valentina.ponce@techba.com,11-4041-2988,1989/03/26,2021-11-17,D09,P18,inactivo
+E1040,Tatiana,Ibáñez,tatiana.ibanez@techba.com,11-5969-4919,03/08/1983,2023/05/08,D05,P12,activo
+E1134,Camila,Sánchez,camila.sanchez@techba.com,11-8854-9189,01-09-1994,19/09/2023,D04,P10,activo
+E1081,Sebastián,Álvarez,sebastian.alvarez@techba.com,11-7685-5906,11/01/1975,10-01-2024,D06,P14,activo
+E1112,  Camila  ,Molina,camila.molina@techba.com,11-9059-1693,15-01-1988,2018/06/19,D07,P16,activo
+E1124,Emilia,Aguilar,emilia.aguilar@techba.com,11-2149-6940,07-03-1984,2020-08-07,D04,P10,activo
+E1191,Ezequiel,Gómez,ezequiel.gomez@techba.com,11-4835-3541,1983-04-24,02-02-2024,D11,P20,activo
+E1117,Jimena,Gutiérrez,jimena.gutierrez@techba.com,11-3236-8205,1977/08/15,26/05/2023,D05,P11,activo
+E1198,Jimena,Aguilar,jimena.aguilar@techba.com,11-2757-9775,02/04/1998,2020-07-22,D10,P19,inactivo
+E1111,Catalina,Sánchez,catalina.sanchez@techba.com,11-2063-9149,06/07/1998,2019/07/18,D12,P11,activo
+E1152,Cristian,Ferreira,cristian.ferreira@techba.com,11-9460-1907,1978-09-05,06-03-2020,D06,P13,activo
+E1196,  Celeste  ,Ruiz,celeste.ruiz@techba.com,11-8180-9813,1990-04-28,28-05-2019,D12,P11,activo
+E1139,Andrés,López,andres.lopez@techba.com,11-4585-6080,27-07-1991,2022-08-09,D01,P02,activo
+E1056,Cecilia,Medina,cecilia.medina@techba.com,11-4508-7046,17/09/1990,24-07-2020,D09,P18,activo
+E1021,Nicolás,Acosta,nicolas.acosta@techba.com,11-3746-9288,1983/03/12,2018/04/12,D05,P11,activo
+E1018,  Emilia  ,Ibáñez,emilia.ibanez@techba.com,11-3289-1931,1991/02/28,20/02/2019,D02,P07,inactivo
+E1184,Lucas,Medina,lucas.medina@techba.com,11-7573-2341,1991-08-17,03/06/2023,D10,P19,activo
+E1008,Lucía,Sánchez,lucia.sanchez@techba.com,11-9611-6947,08-05-2000,19-04-2018,D02,P05,activo
+E1113,Natalia,Sánchez,natalia.sanchez@techba.com,11-5318-1341,1985-03-26,2022/08/27,D12,P12,activo
+E1013,  Ariel  ,Peralta,ariel.peralta@techba.com,11-4902-7939,28/08/1988,2023-01-22,D11,P20,activo
+E1098,Facundo,Suárez,facundo.suarez@techba.com,11-6309-2862,1998/02/16,2021-06-17,D10,P19,activo
+E1051,Lucía,Suárez,lucia.suarez@techba.com,11-8736-9031,1978-07-12,2023/08/23,D03,P09,activo
+E1085,Valeria,Mendoza,valeria.mendoza@techba.com,11-6708-5847,1997-05-01,13-11-2024,D05,P11,activo
+E1110,Emilia,Ramos,emilia.ramos@techba.com,11-2372-4612,02/10/1987,10/04/2018,D04,P10,activo
+E1045,Nicolás,Peralta,nicolas.peralta@techba.com,11-3111-8564,1980/01/09,2021/06/07,D08,P20,activo
+E1169,Jimena,Martínez,jimena.martinez@techba.com,11-7781-3262,18-04-1991,16-11-2020,D09,P18,activo
+E1182,Cecilia,Medina,cecilia.medina@techba.com,11-2508-2936,06-05-1989,17-11-2021,D12,P12,activo
+E1122,Gonzalo,Ríos,gonzalo.rios@techba.com,11-4327-5128,1998/11/20,2024-03-11,D02,P07,activo
+E1146,  Pilar  ,Sánchez,pilar.sanchez@techba.com,11-2212-4048,1990-09-13,2022-02-09,D05,P12,activo
+E1144,Matías,Torres,matias.torres@techba.com,11-8952-8179,03/03/1976,2019/11/12,D06,P14,inactivo
+E1105,Facundo,Núñez,facundo.nunez@techba.com,11-3837-2773,12/09/1986,19/05/2018,D04,P10,activo
+E1156,Nadia,Ramos,nadia.ramos@techba.com,11-5956-5012,2000-11-13,03/08/2020,D12,P11,activo
+E1194,Pilar,Ramos,PILAR.RAMOS@TECHBA.COM,11-9178-3347,08/09/1996,2021-05-09,D01,P02,activo
+E1019,Sofía,Carrasco,sofia.carrasco@techba.com,11-4016-1651,14/02/1994,19/10/2023,D09,P18,inactivo
+E1174,Florencia,Pérez,florencia.perez@techba.com,11-7043-4920,22/01/1982,21-04-2022,D04,P10,activo
+E1133,Gonzalo,Rojas,gonzalo.rojas@techba.com,11-6323-7934,1978-05-08,2020-02-02,D04,P10,activo
+E1042,Valentina,Jiménez,valentina.jimenez@techba.com,11-8823-7883,1987-10-23,13/10/2018,D08,P20,inactivo
+E1109,Aldana,Rojas,aldana.rojas@techba.com,11-5621-7785,1983-04-25,12-02-2022,D07,P15,activo
+E1103,Ariel,Núñez,ariel.nunez@techba.com,11-2549-2494,1977-02-14,24/12/2018,D06,P13,activo
+E1188,Pablo,Núñez,pablo.nunez@techba.com,11-2259-5703,1988-03-25,2019-11-24,D11,P20,activo
+E1138,  Cecilia  ,Núñez,cecilia.nunez@techba.com,11-7175-3986,03/03/2000,02/08/2023,D05,P11,activo
+E1044,  Lucía  ,Ríos,lucia.rios@techba.com,11-4753-7624,1998-03-27,20-03-2021,D09,P17,inactivo
+E1017,Florencia,Morales,florencia.morales@techba.com,11-4430-4566,24-10-1976,2022-01-24,D06,P13,activo
+E1104,Ailén,Sánchez,ailen.sanchez@techba.com,11-5365-6793,28-07-1996,2023/01/10,D10,P19,activo
+E1151,Nadia,García,nadia.garcia@techba.com,11-5686-8632,12/09/1996,21/09/2019,D10,P19,activo
+E1079,Nicolás,Núñez,nicolas.nunez@techba.com,11-8402-5342,1985/10/23,2021-11-03,D06,P14,inactivo
+E1118,Franco,Gómez,franco.gomez@techba.com,11-5702-1616,27-06-1976,21-02-2020,D02,P07,activo
+E1043,Tatiana,Ríos,TATIANA.RIOS@TECHBA.COM,11-8991-7865,1992/12/24,2022-10-08,D08,P20,activo
+E1001,Esteban,Álvarez,esteban.alvarez@techba.com,11-6375-5010,1980/08/13,2020/11/23,D09,P17,activo
+E1149,  Ignacio  ,Morales,ignacio.morales@techba.com,11-8488-3275,1982/08/01,2020/09/19,D06,P14,activo
+E1068,Lucas,Ortiz,lucas.ortiz@techba.com,11-6720-1659,1999-03-16,2022-11-15,D05,P11,inactivo
+E1003,Laura,Gómez,laura.gomez@techba.com,11-3170-5339,1979-04-24,2022/09/09,D12,P12,inactivo
+E1029,Bruno,Flores,bruno.flores@techba.com,11-4282-2137,12-05-1999,2023-09-13,D11,P20,inactivo
+E1078,Facundo,Ferreira,facundo.ferreira@techba.com,11-9908-6439,1978/08/04,01/08/2022,D12,P11,activo
+E1030,Andrés,Castro,andres.castro@techba.com,11-3462-5349,1976-02-20,24/06/2021,D06,P14,activo
+E1147,Cecilia,Cabrera,cecilia.cabrera@techba.com,11-3639-3009,15/02/1979,2019-12-15,D02,P07,inactivo
+E1024,Matías,Flores,matias.flores@techba.com,11-8317-3143,1995/05/06,2023-08-18,D12,P12,activo
+E1010,Marcos,Ramos,marcos.ramos@techba.com,11-5268-7118,15/09/1989,08/04/2018,D02,P06,activo
+E1126,Santiago,Ruiz,santiago.ruiz@techba.com,11-8810-3712,02/08/1998,2021/06/22,D12,P11,inactivo
+E1142,Sofía,Rodríguez,sofia.rodriguez@techba.com,11-4686-5843,20/08/1984,2023/07/06,D12,P12,activo
+E1080,Jimena,Acosta,jimena.acosta@techba.com,11-2294-2121,1982/11/22,2020/04/24,D02,P06,inactivo
+E1127,Tatiana,Vera,tatiana.vera@techba.com,11-3916-9749,1982-05-26,27/08/2024,D04,P10,activo
+E1049,Pablo,Ramos,pablo.ramos@techba.com,11-6716-7149,1987-12-07,23-10-2018,D11,P20,activo
+E1037,Aldana,Molina,aldana.molina@techba.com,11-3998-3417,1995/12/01,2024/02/25,D07,P15,activo
+E1143,Hernán,Mendoza,hernan.mendoza@techba.com,11-7036-8126,1983-11-26,2018-02-22,D11,P20,activo
+E1160,Aldana,Ramos,aldana.ramos@techba.com,11-6074-1379,1977-07-17,2021/04/07,D10,P19,activo
+E1155,Nicolás,López,NICOLAS.LOPEZ@TECHBA.COM,11-9770-5336,25/04/1995,2022-07-20,D11,P20,activo
+E1163,Verónica,Sánchez,veronica.sanchez@techba.com,11-3054-2584,1987-06-26,2020-09-12,D03,P08,activo
+E1061,Aldana,García,aldana.garcia@techba.com,11-6726-1878,26-03-1979,03/05/2022,D04,P10,activo
+E1046,Antonella,Suárez,antonella.suarez@techba.com,11-4066-2341,24/01/1990,12/01/2022,D04,P10,activo
+E1045,Nicolás,Peralta,nicolas.peralta@techba.com,11-3111-8564,1980/01/09,2021/06/07,D08,P20,activo
+E1091,Sofía,Herrera,sofia.herrera@techba.com,11-5862-1410,11/09/1994,21/04/2022,D02,P07,activo
+E1167,Nadia,Benítez,nadia.benitez@techba.com,11-6731-4728,1998-01-19,2021-03-17,D11,P20,activo
+E1161,Aldana,Rojas,aldana.rojas@techba.com,11-9228-8710,1984/09/01,14/02/2024,D03,P09,activo
+E1197,Gonzalo,Suárez,gonzalo.suarez@techba.com,11-9928-7824,1992-09-05,09/04/2021,D04,P10,activo
+E1137,Lucas,Benítez,lucas.benitez@techba.com,11-8022-6447,1979/01/12,27-06-2022,D11,P20,activo
+E1069,Nadia,Cabrera,nadia.cabrera@techba.com,11-9938-2494,14/06/1990,2020/06/22,D02,P05,activo
+E1062,Lorena,Rojas,lorena.rojas@techba.com,11-8477-4697,1999/09/13,2021/08/10,D10,P19,activo
+E1180,Santiago,Molina,santiago.molina@techba.com,11-8774-8007,1991-06-03,04/11/2021,D03,P08,activo
+E1026,Andrés,Mendoza,andres.mendoza@techba.com,11-3720-5088,12-02-1996,2024-09-28,D07,P15,inactivo
+E1041,Facundo,Torres,facundo.torres@techba.com,11-3894-7275,1997-03-23,14-02-2019,D07,P16,activo
+E1060,Diego,Vargas,diego.vargas@techba.com,11-5845-8843,1989-06-06,2018/05/28,D08,P20,activo
+E1150,  Esteban  ,Rodríguez,esteban.rodriguez@techba.com,11-2538-6067,24/12/1987,14-09-2021,D07,P15,activo
+E1175,Cecilia,Núñez,CECILIA.NUNEZ@TECHBA.COM,11-2823-3252,1975-09-06,16-11-2021,D08,P20,activo
+E1136,Bruno,Núñez,bruno.nunez@techba.com,11-2356-7338,1986-05-24,26/06/2018,D02,P06,activo
+E1121,Maximiliano,Aguilar,maximiliano.aguilar@techba.com,11-9519-5634,1987-07-25,2020-11-20,D01,P03,activo
+E1015,Sebastián,Ponce,SEBASTIAN.PONCE@TECHBA.COM,11-2802-1828,1995/09/27,2018/02/25,D04,P10,activo
+E1187,Antonella,González,antonella.gonzalez@techba.com,11-8109-4570,02/02/1993,2021/06/23,D02,P07,inactivo
+E1008,Lucía,Sánchez,lucia.sanchez@techba.com,11-9611-6947,08-05-2000,19-04-2018,D02,P05,activo
+E1057,Antonella,Ramos,antonella.ramos@techba.com,11-4059-4777,1978/12/07,24-02-2020,D09,P17,activo
+E1153,Jimena,Rodríguez,jimena.rodriguez@techba.com,11-4052-4216,09/09/1995,2019-11-10,D10,P19,activo
+E1082,Hernán,Suárez,hernan.suarez@techba.com,11-6636-3950,1980-03-03,2022-07-20,D11,P20,activo
+E1007,Martín,Ramos,martin.ramos@techba.com,11-8894-9317,1994/04/05,18/03/2020,D09,P17,activo
+E1047,Lucas,Fernández,lucas.fernandez@techba.com,11-9779-5051,20-01-1981,05-04-2019,D08,P20,activo
+E1070,Natalia,Molina,natalia.molina@techba.com,11-8664-1601,11/02/1989,04-06-2020,D07,P15,activo
+E1100,Cecilia,Vera,cecilia.vera@techba.com,11-2602-2323,05/10/1985,2018/03/09,D10,P19,activo
+E1083,Ezequiel,Gómez,ezequiel.gomez@techba.com,11-7225-5161,22-05-1989,10-08-2018,D11,P20,activo
+E1129,Iván,Núñez,ivan.nunez@techba.com,11-9160-7081,1992-02-23,2024/09/28,D02,P06,activo
+E1145,Esteban,Torres,esteban.torres@techba.com,11-7562-8371,15-06-1986,19/02/2024,D03,P09,activo
+E1089,Agustina,Vargas,agustina.vargas@techba.com,11-8115-6549,2000/02/15,25/03/2018,D04,P10,inactivo
+E1125,Jimena,Pérez,jimena.perez@techba.com,11-6158-9843,02-09-1998,25/06/2023,D10,P19,activo
+E1178,Pablo,Flores,pablo.flores@techba.com,11-4331-8444,17/09/1995,28-03-2021,D09,P18,activo
+E1190,Emilia,Romero,emilia.romero@techba.com,11-7962-4648,1975-01-10,24/11/2021,D09,P18,activo
+E1092,Nadia,Suárez,nadia.suarez@techba.com,11-2955-3290,1976-01-10,04-02-2021,D04,P10,activo
+E1098,Facundo,Suárez,facundo.suarez@techba.com,11-6309-2862,1998/02/16,2021-06-17,D10,P19,activo
+E1005,Lorena,García,LORENA.GARCIA@TECHBA.COM,11-5152-7252,17/08/1994,28/09/2020,D01,P01,activo
+E1140,Martín,Flores,martin.flores@techba.com,11-4238-3039,14-06-2000,15/12/2021,D07,P16,inactivo
+E1162,Micaela,López,micaela.lopez@techba.com,11-5281-1838,1993-09-07,2020-09-10,D02,P06,activo
+E1064,Matías,Suárez,matias.suarez@techba.com,11-5690-8699,1984/01/08,2020-12-10,D12,P12,activo
+E1135,  Esteban  ,Mendoza,esteban.mendoza@techba.com,11-3970-7825,1980/11/22,2018/09/12,D02,P07,activo
+E1165,Rodrigo,Gutiérrez,rodrigo.gutierrez@techba.com,11-3331-7438,1994-12-27,2020/10/11,D09,P18,activo
+E1052,Lorena,Acosta,lorena.acosta@techba.com,11-8345-8921,27-07-1989,2023/10/09,D06,P13,activo
+E1108,Gabriela,Gutiérrez,gabriela.gutierrez@techba.com,11-8363-2391,1976-03-06,02/10/2024,D11,P20,activo
+E1036,Tomás,Morales,tomas.morales@techba.com,11-3207-1400,1976/04/16,2022/02/15,D07,P15,activo
+E1099,Esteban,López,esteban.lopez@techba.com,11-7957-9543,21-08-1984,2018-01-16,D07,P16,activo
+E1175,Cecilia,Núñez,CECILIA.NUNEZ@TECHBA.COM,11-2823-3252,1975-09-06,16-11-2021,D08,P20,activo
+E1023,Marcos,Flores,marcos.flores@techba.com,11-3667-5325,1991-08-09,2024-01-03,D11,P20,activo
+E1016,Julieta,Molina,JULIETA.MOLINA@TECHBA.COM,11-9392-1960,1980/07/01,2021-05-26,D08,P20,activo
+E1123,Natalia,Molina,natalia.molina@techba.com,11-3056-2388,13/09/1984,27-06-2023,D03,P08,activo
+E1141,Cecilia,Cabrera,cecilia.cabrera@techba.com,11-5009-9507,1983/02/24,14-02-2021,D10,P19,activo
+E1106,Esteban,Ortiz,esteban.ortiz@techba.com,11-2237-3955,25-12-1983,12/06/2020,D01,P02,inactivo
+E1128,Rocío,Vargas,ROCIO.VARGAS@TECHBA.COM,11-8374-7256,14/09/1991,2019/04/26,D10,P19,inactivo
+E1076,Paula,Núñez,paula.nunez@techba.com,11-4827-6446,13/09/1992,28/06/2021,D04,P10,activo
+E1166,Aldana,Fernández,aldana.fernandez@techba.com,11-5017-6427,14-02-1996,26-05-2022,D12,P11,activo
+E1063,Esteban,Pérez,esteban.perez@techba.com,11-9762-4404,1995/04/09,2023/02/06,D04,P10,activo
+E1199,Tomás,Benítez,TOMAS.BENITEZ@TECHBA.COM,11-7933-4555,28-04-1990,2020-05-01,D04,P10,inactivo
+E1159,Celeste,Suárez,celeste.suarez@techba.com,11-4033-3616,1985/10/24,25-04-2020,D03,P09,inactivo
+E1158,  Lucas  ,Aguilar,lucas.aguilar@techba.com,11-6218-2739,15-04-1985,2018-05-15,D04,P10,activo
+E1009,Lucas,Acosta,lucas.acosta@techba.com,11-8273-3060,1979/11/16,2022/03/09,D09,P18,inactivo
+E1039,Lorena,Ferreira,lorena.ferreira@techba.com,11-5495-9976,24/03/1989,2024-08-15,D05,P11,activo
+E1115,Nicolás,Ferreira,nicolas.ferreira@techba.com,11-7187-2868,1991-09-07,2024-06-12,D12,P11,activo
+E1072,Pablo,Vargas,pablo.vargas@techba.com,11-5589-8941,21/01/1978,23-04-2022,D03,P09,activo
+E1071,  Daniela  ,Martínez,daniela.martinez@techba.com,11-3536-9494,25-10-1986,2021/11/15,D01,P02,activo
+E1048,Sebastián,Castro,sebastian.castro@techba.com,11-8282-7043,20/10/1980,2023/12/04,D03,P09,activo
+E1055,Aldana,Ponce,aldana.ponce@techba.com,11-8210-4937,21-08-1997,15-08-2023,D01,P01,activo

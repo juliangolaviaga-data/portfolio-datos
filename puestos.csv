@@ -1,0 +1,21 @@
+puesto_id,nombre,nivel,banda_salarial_min,banda_salarial_max,moneda
+P01,Desarrollador Junior,JUNIOR,400000,600000,ARS
+P02,  Desarrollador Semi Senior  ,SEMI SENIOR,1500,2500,USD
+P03,Desarrollador Senior,Senior,3000,5000,USD
+P04,  Tech Lead  ,lead,5000,8000,USD
+P05,  QA Junior  ,junior,350000,550000,ARS
+P06,  QA Semi Senior  ,Semi Senior,1200,2000,USD
+P07,  QA Senior  ,Senior,2500,4000,USD
+P08,  Diseñador UX/UI Junior  ,Junior,380000,580000,ARS
+P09,Diseñador UX/UI Senior,SENIOR,2500,4000,USD
+P10,Product Manager,senior,4000,7000,USD
+P11,  Analista de Ventas  ,Semi Senior,1200,2000,USD
+P12,Ejecutivo de Ventas,Senior,2000,3500,USD
+P13,Analista RRHH,Semi Senior,900000,1400000,ARS
+P14,Gerente RRHH,Gerente,3000,5000,USD
+P15,Analista Finanzas,semi senior,800000,1200000,ARS
+P16,  Gerente Finanzas  ,GERENTE,3500,5500,USD
+P17,  Analista de Datos  ,SEMI SENIOR,1500,2500,USD
+P18,  Data Engineer  ,SENIOR,3000,5000,USD
+P19,DevOps,Senior,3500,5500,USD
+P20,  Gerente de Proyecto  ,GERENTE,4000,6000,USD

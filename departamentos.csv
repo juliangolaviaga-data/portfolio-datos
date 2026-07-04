@@ -1,0 +1,13 @@
+depto_id,nombre,gerente_id,ubicacion,latitud,longitud
+D01,Desarrollo,E1002,Palermo,-34.5875,-58.4314
+D02,QA,E1008,Palermo,-34.5875,-58.4314
+D03,Diseño,E1010,Palermo,-34.5875,-58.4314
+D04,PRODUCT,E1001,Palermo,-34.5875,-58.4314
+D05,Ventas,E1033,Microcentro,-34.6037,-58.3816
+D06,rrhh,E1027,Microcentro,-34.6037,-58.3816
+D07,Finanzas,E1005,Microcentro,-34.6037,-58.3816
+D08,OPERACIONES,E1016,Microcentro,-34.6037,-58.3816
+D09,Data & Analytics,E1006,Palermo,-34.5875,-58.4314
+D10,INFRAESTRUCTURA,E1012,Palermo,-34.5875,-58.4314
+D11,LEGAL,E1051,Microcentro,-34.6037,-58.3816
+D12,Marketing,E1003,Palermo,-34.5875,-58.4314
