@@ -1,0 +1,301 @@
+order_id,fecha,cliente_id,producto_id,cantidad,precio_unitario,descuento,metodo_pago,estado
+1001,29/11/2025,C043,P004,3,5800,0.2,transferencia,completado
+1002,30 Aug 2024,C011,P006,4,9800,0,tarjeta,cancelado
+1003,25 Feb 2025,C043,P008,3,12000,0,efectivo,completado
+1004,09 Feb 2024,C031,P008,2,12000,0.25,tarjeta,pendiente
+1005,21/08/2024,C002,P007,4,18500,0.15,tarjeta,completado
+1006,Oct 12 2024,C042,P017,4,5900,0.15,transferencia,completado
+1007,24/09/2024,C038,P009,1,22000,0,tarjeta,completado
+1008,17-11-2024,C039,P017,1,5900,0.2,transferencia,completado
+1009,15.02.2024,C028,P001,5,2500,0.05,tarjeta,completado
+1010,Nov 11 2025,C040,P011,1,4100,0.1,tarjeta,completado
+1011,30-11-2024,C045,P010,5,3200,0,tarjeta,completado
+1012,23.01.2025,C048,P006,5,9800,0.1,tarjeta,pendiente
+1013,Nov 07 2024,C014,P014,5,5500,0.15,tarjeta,completado
+1014,2024/08/06,C031,P006,1,9800,0.1,tarjeta,completado
+1015,2024-12-09,C049,P008,3,12000,0.05,efectivo,completado
+1016,17/02/2024,C031,P020,1,8200,0.25,tarjeta,completado
+1017,18.07.2024,C045,P013,4,1800,0.2,tarjeta,completado
+1018,06 Jan 2024,C050,P004,4,5800,0.05,tarjeta,cancelado
+1019,14-06-2025,C004,P018,2,3600,0,tarjeta,pendiente
+1020,2025/11/14,C036,P020,3,8200,0.25,efectivo,completado
+1021,31-05-2025,C036,P015,2,7900,0.25,tarjeta,pendiente
+1022,Oct 14 2025,C050,P017,4,5900,0.05,tarjeta,completado
+1023,19/10/2024,C018,P011,3,4100,0,tarjeta,completado
+1024,11/12/2025,C046,P007,1,18500,0.2,tarjeta,completado
+1025,2025-03-01,C014,P014,4,5500,0,transferencia,pendiente
+1026,24-01-2025,C001,P012,3,8500,0.2,transferencia,cancelado
+1027,2025/03/05,C048,P018,5,3600,0.05,tarjeta,completado
+1028,2025-05-12,C025,P011,4,4100,0,efectivo,cancelado
+1029,2025/09/29,C002,P013,5,1800,0,tarjeta,completado
+1030,17/04/2025,C004,P009,4,22000,0.15,tarjeta,completado
+1031,Jan 23 2025,C049,P014,3,5500,0,tarjeta,completado
+1032,Feb 23 2024,C015,P003,1,5200,0,transferencia,completado
+1033,2024/01/21,C010,P008,2,12000,0.25,efectivo,completado
+1034,11-08-2024,C045,P009,3,22000,0,efectivo,cancelado
+1035,27 Apr 2024,C011,P010,1,3200,0,transferencia,completado
+1036,19-01-2025,C046,P007,1,18500,0.05,tarjeta,pendiente
+1037,2025/12/01,C008,P019,1,2900,0.15,tarjeta,completado
+1038,2024/03/11,C042,P011,1,4100,0.2,efectivo,completado
+1039,05.01.2025,C030,P005,4,6500,0,efectivo,cancelado
+1040,2024/10/03,C035,P016,4,6800,0.2,efectivo,completado
+1041,26 Nov 2024,C016,P003,3,5200,0.25,tarjeta,completado
+1042,16.09.2025,C025,P011,1,4100,0.25,transferencia,completado
+1043,Aug 05 2024,C017,P011,3,4100,0.1,tarjeta,completado
+1044,2024-07-14,C016,P014,4,5500,0.05,efectivo,completado
+1045,17-05-2025,C002,P003,3,5200,0.05,tarjeta,completado
+1046,2025/11/10,C024,P016,5,6800,0.15,tarjeta,completado
+1047,Dec 04 2024,C045,P015,3,7900,0.1,tarjeta,completado
+1048,Jul 16 2024,C008,P018,2,3600,0.05,tarjeta,completado
+1049,26 Aug 2025,C034,P020,3,8200,0,efectivo,completado
+1050,04/01/2025,C020,P001,5,2500,0,tarjeta,cancelado
+1051,Jul 20 2025,C045,P005,4,6500,0,transferencia,completado
+1052,25-04-2025,C029,P011,2,4100,0,tarjeta,pendiente
+1053,26 Apr 2024,C005,P013,4,1800,0,tarjeta,completado
+1054,04/06/2024,C037,P010,1,3200,0.05,tarjeta,pendiente
+1055,2025/09/12,C040,P008,5,12000,0.2,tarjeta,completado
+1056,25-08-2025,C020,P019,5,2900,0,efectivo,completado
+1057,31.07.2024,C014,P009,1,22000,0,tarjeta,completado
+1058,2024-06-09,C027,P015,5,7900,0.25,tarjeta,completado
+1059,Dec 24 2025,C045,P015,1,7900,0.05,transferencia,pendiente
+1060,2025/10/02,C043,P007,4,18500,0,tarjeta,completado
+1061,29 Sep 2024,C010,P003,1,5200,0,efectivo,completado
+1062,Aug 05 2025,C029,P004,4,5800,0.1,efectivo,cancelado
+1063,2025/05/27,C032,P015,1,7900,0,transferencia,completado
+1064,Sep 10 2025,C002,P003,2,5200,0,transferencia,completado
+1065,2024/10/02,C003,P006,4,9800,0.25,transferencia,completado
+1066,22-08-2025,C041,P016,1,6800,0.25,tarjeta,completado
+1067,2025-11-17,C011,P011,4,4100,0.25,tarjeta,cancelado
+1068,2025-07-17,C030,P003,3,5200,0.1,tarjeta,cancelado
+1069,17 Feb 2025,C033,P001,5,2500,0.25,tarjeta,completado
+1070,2024-06-2O,C049,P016,4,6800,0,tarjeta,completado
+1071,21-10-2024,C045,P016,1,6800,0,transferencia,completado
+1072,02.09.2024,C011,P010,5,3200,0,tarjeta,completado
+1073,26-04-2024,C008,P005,4,6500,0.1,tarjeta,completado
+1074,09-05-2025,C016,P015,5,7900,0,tarjeta,cancelado
+1075,04.06.2025,C009,P003,3,5200,0.2,tarjeta,pendiente
+1076,30 Sep 2024,C001,P010,3,3200,0.25,transferencia,completado
+1077,May 10 2025,C022,P018,5,3600,0.2,tarjeta,completado
+1078,12.07.2024,C016,P019,4,2900,0.05,transferencia,completado
+1079,21.11.2024,C031,P013,4,1800,0,tarjeta,completado
+1080,2025/05/29,C022,P004,4,5800,0,tarjeta,completado
+1081,27-05-2024,C042,P005,1,6500,0.25,efectivo,completado
+1082,30.09.2025,C026,P003,3,5200,0.2,transferencia,completado
+1083,14 May 2025,C035,P002,5,3800,0,tarjeta,completado
+1084,21/10/2024,C048,P003,4,5200,0,efectivo,completado
+1085,12-04-2024,C011,P010,1,3200,0,tarjeta,completado
+1086,Jan 02 2025,C028,P005,2,6500,0.2,tarjeta,pendiente
+1087,23/06/2024,C006,P020,4,8200,0.05,tarjeta,completado
+1088,25-08-2024,C041,P009,4,22000,0.1,efectivo,pendiente
+1089,Apr 21 2025,C044,P018,2,3600,0,tarjeta,completado
+1090,Aug 24 2025,C041,P014,3,5500,0.25,efectivo,completado
+1091,28 Jan 2025,C031,P004,2,5800,0.2,tarjeta,completado
+1092,Dec 17 2025,C002,P013,3,1800,0,tarjeta,completado
+1093,2024/02/20,C048,P016,3,6800,0.05,efectivo,completado
+1094,13/10/2025,C040,P009,2,22000,0,transferencia,completado
+1095,12 Nov 2024,C029,P002,5,3800,0.15,efectivo,completado
+1096,Oct 29 2024,C048,P014,2,5500,0.05,tarjeta,completado
+1097,2025/01/09,C033,P009,2,22000,0.1,transferencia,cancelado
+1098,29.10.2024,C022,P004,4,5800,0,tarjeta,cancelado
+1099,23.11.2025,C044,P013,5,1800,0.15,tarjeta,completado
+1100,2024/09/27,C008,P015,3,7900,0.1,tarjeta,pendiente
+1101,2025-01-15,C044,P008,4,12000,0,efectivo,cancelado
+1102,2024/12/01,C015,P003,4,5200,0.1,efectivo,completado
+1103,2024-02-16,C020,P016,1,6800,0,tarjeta,completado
+1104,01-02-2025,C024,P018,4,3600,0,transferencia,completado
+1105,2025/05/16,C027,P009,1,22000,0.15,tarjeta,completado
+1106,29 Aug 2024,C024,P004,3,5800,0.15,tarjeta,completado
+1107,05 May 2024,C030,P003,2,5200,0,tarjeta,completado
+1108,08 May 2024,C037,P007,1,18500,0.05,tarjeta,pendiente
+1109,Aug 26 2024,C050,P005,5,6500,0,tarjeta,cancelado
+1110,2024/05/13,C017,P006,1,9800,0,tarjeta,completado
+1111,2024/08/31,C021,P001,2,2500,0.1,tarjeta,completado
+1112,2025-06-22,C048,P003,4,5200,0.25,efectivo,completado
+1113,21-04-2024,C033,P008,5,12000,0,efectivo,cancelado
+1114,2025/11/05,C020,P015,1,7900,0,transferencia,pendiente
+1115,12.03.2025,C007,P016,4,6800,0,transferencia,completado
+1116,2024-05-31,C009,P009,5,22000,0.15,tarjeta,completado
+1117,28-10-2024,C033,P020,4,8200,0,efectivo,completado
+1118,01.11.2025,C050,P018,2,3600,0.2,tarjeta,completado
+1119,13 Dec 2024,C030,P013,4,1800,0,tarjeta,completado
+1120,Sep 18 2024,C010,P016,1,6800,0,efectivo,completado
+1121,08.04.2024,C048,P012,2,8500,0,tarjeta,completado
+1122,03.12.2024,C008,P014,3,5500,0.2,transferencia,completado
+1123,2024/10/21,C020,P012,1,8500,0.05,tarjeta,completado
+1124,Apr 20 2024,C036,P012,1,8500,0.1,tarjeta,pendiente
+1125,28 Jul 2025,C040,P020,5,8200,0,efectivo,completado
+1126,Dec 11 2025,C002,P006,3,9800,0.1,transferencia,completado
+1127,04 Jul 2024,C010,P019,4,2900,0,tarjeta,completado
+1128,2024-02-01,C048,P017,2,5900,0.2,tarjeta,completado
+1129,Jan 13 2025,C047,P011,5,4100,0,transferencia,completado
+1130,2025-09-24,C044,P003,3,5200,0.25,efectivo,completado
+1131,28-03-2025,C018,P007,5,18500,0,tarjeta,completado
+1132,25.11.2025,C038,P016,5,6800,0.1,tarjeta,completado
+1133,2025-09-05,C001,P007,3,18500,0.05,efectivo,pendiente
+1134,Oct 23 2024,C008,P001,4,2500,0.2,tarjeta,completado
+1135,21/12/2025,C033,P018,3,3600,0,tarjeta,completado
+1136,2025-03-22,C030,P003,3,5200,0.2,tarjeta,completado
+1137,Mar 03 2025,C008,P013,1,1800,0.15,tarjeta,cancelado
+1138,16 Apr 2025,C045,P012,1,8500,0.2,efectivo,completado
+1139,26-08-2025,C034,P003,4,5200,0.1,efectivo,completado
+1140,2024-06-21,C033,P004,5,5800,0.05,transferencia,completado
+1141,22 Oct 2025,C010,P008,1,12000,0,tarjeta,completado
+1142,05 Jun 2024,C049,P003,2,5200,0.25,tarjeta,completado
+1143,16-08-2025,C044,P019,5,2900,0.15,transferencia,completado
+1144,03-06-2024,C005,P016,4,6800,0.1,efectivo,completado
+1145,2024/12/26,C005,P010,4,3200,0.25,tarjeta,completado
+1146,2024-10-20,C042,P003,5,5200,0.2,tarjeta,completado
+1147,12-02-2024,C037,P007,3,18500,0.25,tarjeta,cancelado
+1148,2025-04-06,C022,P003,5,5200,0,tarjeta,completado
+1149,2025/03/25,C034,P020,2,8200,0.15,tarjeta,completado
+1150,22 Feb 2025,C022,P020,1,8200,0.15,tarjeta,completado
+1151,25-11-2025,C019,P009,5,22000,0,tarjeta,completado
+1152,May 24 2024,C020,P013,2,1800,0,tarjeta,completado
+1153,02 Dec 2024,C009,P017,1,5900,0.2,tarjeta,completado
+1154,21/06-2024,C014,P011,4,4100,0.05,tarjeta,completado
+1155,Mar 20 2024,C007,P017,5,5900,0,efectivo,pendiente
+1156,24/09/2025,C039,P013,2,1800,0,tarjeta,completado
+1157,01 Oct 2025,C011,P015,1,7900,0.2,tarjeta,completado
+1158,2025/03/30,C019,P015,2,7900,0.05,tarjeta,pendiente
+1159,25 Apr 2025,C013,P012,5,8500,0.25,tarjeta,completado
+1160,2025/01/26,C034,P014,2,5500,0.05,efectivo,completado
+1161,2024-09-13,C042,P016,3,6800,0,efectivo,completado
+1162,May 07 2024,C006,P006,3,9800,0.25,transferencia,completado
+1163,2025-03-23,C015,P015,3,7900,0,tarjeta,completado
+1164,17/01/2025,C025,P003,3,5200,0.05,tarjeta,cancelado
+1165,Oct 27 2025,C010,P005,1,6500,0.1,transferencia,completado
+1166,22 May 2024,C046,P016,4,6800,0,transferencia,completado
+1167,08 Aug 2024,C010,P018,5,3600,0.2,tarjeta,completado
+1168,2024-11-04,C004,P008,4,12000,0.25,tarjeta,pendiente
+1169,2025/05/26,C035,P001,5,2500,0.05,efectivo,completado
+1170,2024/01/02,C023,P008,5,12000,0.2,tarjeta,completado
+1171,Jun 20 2025,C005,P017,5,5900,0,tarjeta,completado
+1172,12-10-2025,C024,P009,1,22000,0.15,efectivo,completado
+1173,03.11.2025,C007,P019,3,2900,0,tarjeta,completado
+1174,20/10/2025,C050,P015,4,7900,0,efectivo,completado
+1175,2025-04-13,C019,P007,1,18500,0.05,transferencia,completado
+1176,2024/11/13,C026,P018,4,3600,0.1,tarjeta,completado
+1177,Oct 19 2024,C050,P002,3,3800,0.1,tarjeta,completado
+1178,13.02.2025,C029,P013,3,1800,0,tarjeta,completado
+1179,Jun 15 2025,C006,P014,1,5500,0.2,efectivo,pendiente
+1180,Jul 12 2025,C021,P004,1,5800,0.15,efectivo,completado
+1181,09.09.2025,C028,P006,4,9800,0.15,tarjeta,completado
+1182,2024/12/27,C028,P009,1,22000,0,efectivo,completado
+1183,09 Jun 2025,C048,P006,1,9800,0,efectivo,completado
+1184,2025-03-24,C009,P003,2,5200,0.15,tarjeta,cancelado
+1185,2024/02/03,C010,P015,3,7900,0.15,tarjeta,completado
+1186,2024/05/20,C024,P013,3,1800,0.1,tarjeta,completado
+1187,09-07-2024,C034,P013,5,1800,0,tarjeta,completado
+1188,01/04/2025,C040,P010,4,3200,0.05,tarjeta,pendiente
+1189,07/04/2025,C046,P015,1,7900,0.15,efectivo,completado
+1190,2025/07/17,C019,P010,2,3200,0,efectivo,completado
+1191,04/05/2024,C009,P008,4,12000,0,tarjeta,completado
+1192,23 Apr 2025,C036,P005,5,6500,0,tarjeta,completado
+1193,2025/05/05,C027,P014,5,5500,0,tarjeta,completado
+1194,16-03-2024,C030,P017,3,5900,0,transferencia,pendiente
+1195,2025/10/17,C012,P005,4,6500,0,efectivo,completado
+1196,07/11/2024,C011,P011,2,4100,0.15,transferencia,completado
+1197,17 Oct 2024,C006,P009,2,22000,0.1,tarjeta,completado
+1198,2025-06-30,C033,P006,5,9800,0,tarjeta,completado
+1199,Sep 11 2025,C037,P002,1,3800,0,tarjeta,completado
+1200,Aug 13 2025,C042,P007,5,18500,0.2,efectivo,completado
+1201,2025/10/04,C019,P010,4,3200,0.05,efectivo,completado
+1202,31-10-2024,C005,P002,2,3800,0.25,tarjeta,completado
+1203,2024/12/14,C010,P011,3,4100,0.15,transferencia,completado
+1204,2025/01/14,C036,P004,3,5800,0.05,tarjeta,completado
+1205,10/09/2024,C007,P002,3,3800,0.2,transferencia,completado
+1206,12 Jun 2024,C021,P019,3,2900,0.05,efectivo,completado
+1207,11-06-2025,C032,P010,4,3200,0,tarjeta,completado
+1208,13/04/2025,C014,P019,3,2900,0,tarjeta,completado
+1209,31.10.2025,C031,P010,5,3200,0,efectivo,completado
+1210,27.09.2024,C024,P013,3,1800,0,tarjeta,completado
+1211,Jul 18 2024,C036,P010,1,3200,0.2,tarjeta,pendiente
+1212,13 Oct 2024,C040,P020,1,8200,0,transferencia,completado
+1213,2024/12/13,C024,P005,2,6500,0.2,tarjeta,completado
+1214,20.05.2024,C022,P016,5,6800,0.25,tarjeta,pendiente
+1215,May 23 2024,C040,P011,2,4100,0.2,transferencia,completado
+1216,2024/11/02,C022,P017,5,5900,0.25,efectivo,completado
+1217,Jan 18 2024,C022,P004,4,5800,0.1,efectivo,completado
+1218,05.12.2025,C002,P020,4,8200,0.1,transferencia,pendiente
+1219,2025/08/15,C015,P002,5,3800,0.25,tarjeta,completado
+1220,26 Sep 2025,C025,P005,2,6500,0,tarjeta,completado
+1221,2024-07-14,C029,P011,4,4100,0,tarjeta,completado
+1222,28 May 2025,C040,P016,1,6800,0,tarjeta,completado
+1223,09-11-2025,C034,P013,3,1800,0,tarjeta,completado
+1224,Jul 13 2025,C044,P009,5,22000,0.25,tarjeta,completado
+1225,Jul 25 2025,C015,P010,3,3200,0.05,efectivo,completado
+1226,May 06 2025,C036,P009,3,22000,0,tarjeta,completado
+1227,08 Feb 2025,C023,P005,3,6500,0,tarjeta,completado
+1228,20-12-2024,C042,P009,4,22000,0.05,tarjeta,completado
+1229,29.07.2025,C018,P005,1,6500,0.05,tarjeta,completado
+1230,27/06/2025,C041,P008,1,12000,0,tarjeta,completado
+1231,12.04.2024,C050,P005,1,6500,0,tarjeta,cancelado
+1232,02-05-2025,C042,P007,3,18500,0.15,tarjeta,completado
+1233,01.04.2024,C037,P008,5,12000,0,transferencia,completado
+1234,2024-06-29,C026,P016,2,6800,0.1,transferencia,completado
+1235,2025/08/04,C007,P011,3,4100,0.25,transferencia,completado
+1236,20/05/2025,C033,P015,3,7900,0.05,efectivo,completado
+1237,14.04.2025,C017,P006,1,9800,0.15,efectivo,completado
+1238,16/07/2024,C040,P013,4,1800,0.15,tarjeta,completado
+1239,08/07/2024,C031,P011,2,4100,0,tarjeta,completado
+1240,Sep 30 2024,C020,P019,5,2900,0,tarjeta,completado
+1241,2024-08-29,C043,P004,4,5800,0.1,tarjeta,completado
+1242,21 Dec 2025,C020,P004,3,5800,0.15,efectivo,completado
+1243,16-05-2024,C010,P015,5,7900,0.15,tarjeta,completado
+1244,27 Apr 2025,C035,P007,2,18500,0,tarjeta,completado
+1245,2025-01-05,C037,P004,1,5800,0.05,tarjeta,completado
+1246,01 Dec 2024,C034,P015,1,7900,0.05,efectivo,completado
+1247,06-06-2025,C004,P015,2,7900,0.2,tarjeta,completado
+1248,18.04.2025,C020,P001,4,2500,0.1,efectivo,completado
+1249,2025-08-15,C003,P014,3,5500,0,tarjeta,completado
+1250,11-03-2024,C003,P010,4,3200,0,efectivo,pendiente
+1251,23-10-2025,C024,P013,4,1800,0.2,tarjeta,completado
+1252,08 Nov 2025,C035,P005,3,6500,0,tarjeta,completado
+1253,25/06/2025,C047,P008,1,12000,0,transferencia,completado
+1254,11-07-2025,C035,P013,2,1800,0.05,tarjeta,completado
+1255,12.07.2024,C049,P004,1,5800,0.2,efectivo,cancelado
+1256,17/01/2024,C014,P003,1,5200,0,tarjeta,completado
+1257,19/02/2024,C048,P002,4,3800,0.25,tarjeta,completado
+1258,27/02/2024,C033,P010,2,3200,0.15,tarjeta,pendiente
+1259,24/11/2024,C020,P005,5,6500,0.05,tarjeta,completado
+1260,2025/07/24,C048,P006,4,9800,0.25,tarjeta,completado
+1261,20.10.2025,C025,P017,3,5900,0.2,tarjeta,completado
+1262,07 Jul 2024,C035,P016,2,6800,0.05,tarjeta,completado
+1263,2025-04-19,C036,P014,4,5500,0,tarjeta,completado
+1264,04.12.2024,C006,P015,3,7900,0,tarjeta,pendiente
+1265,Feb 22 2024,C025,P020,5,8200,0,transferencia,completado
+1266,24.08.2025,C043,P018,2,3600,0.25,tarjeta,cancelado
+1267,2024-11-06,C014,P007,1,18500,0.25,transferencia,completado
+1268,21/12/2025,C026,P008,5,12000,0.15,efectivo,completado
+1269,30.06.2025,C023,P010,3,3200,0.15,tarjeta,completado
+1270,10 Apr 2024,C047,P016,3,6800,0.05,tarjeta,completado
+1271,30 Jul 2025,C015,P005,1,6500,0.1,tarjeta,completado
+1272,Mar 03 2025,C010,P007,3,18500,0.05,tarjeta,pendiente
+1273,2025/05/26,C042,P011,3,4100,0.25,transferencia,completado
+1274,17-05-2025,C011,P012,2,8500,0,efectivo,completado
+1275,09.07.2025,C004,P017,1,5900,0,transferencia,completado
+1276,07-01-2024,C009,P008,1,12000,0,tarjeta,completado
+1277,2025-01-17,C040,P020,4,8200,0.25,tarjeta,completado
+1278,2025-02-25,C002,P017,3,5900,0.1,tarjeta,pendiente
+1279,21-11-2025,C012,P004,1,5800,0,tarjeta,completado
+1280,15 Sep 2024,C023,P009,4,22000,0,tarjeta,completado
+1281,01/08/2025,C045,P008,3,12000,0,efectivo,pendiente
+1282,2024-02-02,C026,P013,4,1800,0.25,tarjeta,completado
+1283,2024-06-24,C032,P014,3,5500,0,transferencia,cancelado
+1284,23/08/2024,C045,P019,4,2900,0.1,tarjeta,completado
+1285,2024/10/14,C037,P002,2,3800,0.15,tarjeta,completado
+1286,27 May 2024,C046,P013,1,1800,0.1,tarjeta,completado
+1287,02.02.2025,C035,P011,4,4100,0,efectivo,completado
+1288,2024/03/21,C048,P012,1,8500,0,tarjeta,pendiente
+1289,2024/12/14,C050,P020,5,8200,0.2,transferencia,completado
+1290,Oct 11 2025,C029,P016,2,6800,0.15,tarjeta,completado
+1291,09.07.2024,C038,P013,1,1800,0.1,efectivo,completado
+1292,Mar 25 2024,C010,P013,2,1800,0.2,tarjeta,completado
+1293,Jan 06 2024,C029,P012,3,8500,0,tarjeta,completado
+1294,2025/04/04,C036,P017,4,5900,0,tarjeta,completado
+1295,2024/04/05,C039,P011,4,4100,0,tarjeta,completado
+1296,27.03.2024,C036,P008,5,12000,0,efectivo,completado
+1297,Oct 02 2024,C018,P016,2,6800,0,tarjeta,completado
+1298,02-11-2024,C005,P012,3,8500,0.05,efectivo,completado
+1299,23/09/2025,C030,P004,2,5800,0.1,tarjeta,completado
+1300,27-09-2025,C022,P015,3,7900,0.2,efectivo,pendiente

@@ -1,0 +1,55 @@
+cliente_id,nombre,email,telefono,ciudad,fecha_registro,segmento
+C022,Franco Gutiérrez,franco.gutierrez@gmail.com,011-2827-5808,Morón,2023-03-15,premium
+C013,Julieta Ruiz,julieta.ruiz@gmail.com,011-7216-5422,Lomas de Zamora,2023-04-22,premium
+C008,Ignacio Sánchez,ignacio.sanchez@gmail.com,011-7201-2291,Lomas de Zamora,2023-05-27,regular
+C015,Pilar Jiménez,pilar.jimenez@gmail.com,011-4456-6155,Almagro,2023-11-16,regular
+C045,Cecilia Leiva,cecilia.leiva@gmail.com,011-9883-1998,Tigre,2023-01-02,regular
+C011,Martina Torres,martina.torres@gmail.com,011-6977-3664,Quilmes,2023-06-07,regular
+C031,Aldana Gómez,aldana.gomez@gmail.com,011-5061-4681,San Telmo,2023-06-01,regular
+C034,Mauricio Ferreira,mauricio.ferreira@gmail.com,011-5562-8953,Almagro,2023-09-05,regular
+C025,Celeste Aguilar,celeste.aguilar@gmail.com,011-3646-9837,Avellaneda,2023-01-20,premium
+C039,Lorena Benítez,lorena.benitez@gmail.com,011-7912-4006,Núñez,2023-08-08,nuevo
+C003,Valentina López,valentina.lopez@gmail.com,011-2535-4582,Villa Crespo,2023-09-20,premium
+C029,Rocío Peralta,rocio.peralta@gmail.com,011-7932-4470,Lomas de Zamora,2023-12-23,premium
+C012,Facundo Álvarez,facundo.alvarez@gmail.com,011-2169-3803,Lomas de Zamora,2023-12-08,premium
+C002,Matías González,matias.gonzalez@gmail.com,011-2679-9935,San Telmo,2023-10-14,premium
+C046,Iván Paredes,ivan.paredes@gmail.com,011-9238-9701,Flores,2023-01-17,premium
+C032,Sebastián Núñez,sebastian.nuñez@gmail.com,011-4770-4608,Palermo,2023-02-23,regular
+C044,Marcos Cardozo,marcos.cardozo@gmail.com,011-8973-3536,Almagro,2023-05-07,nuevo
+C041,Nadia Villalba,nadia.villalba@gmail.com,011-9856-1241,San Telmo,2023-04-06,regular
+C004,Agustín Martínez,agustin.martinez@gmail.com,011-4257-9928,Morón,2023-04-15,regular
+C026,Maximiliano Ríos,maximiliano.rios@gmail.com,011-1319-2832,Quilmes,2023-05-08,premium
+C028,Bruno Suárez,bruno.suarez@gmail.com,011-3060-3103,Vicente López,2023-09-06,premium
+C047,Gabriela Soria,gabriela.soria@gmail.com,011-4044-2122,Tres de Febrero,2023-02-22,nuevo
+C038,Gonzalo Carrasco,gonzalo.carrasco@gmail.com,011-2790-5073,Almagro,2023-04-18,regular
+C050,Juan Cruz Navarro,juan.cruz.navarro@gmail.com,011-5272-4346,Tigre,2023-04-09,regular
+C005,Camila Rodríguez,camila.rodriguez@gmail.com,011-1106-3615,Morón,2023-06-09,premium
+C010,Tomás Romero,tomas.romero@gmail.com,011-5741-2307,Villa Crespo,2023-02-13,premium
+C036,Hernán Acosta,hernan.acosta@gmail.com,011-8062-6804,Morón,2023-07-15,nuevo
+C018,Ezequiel Castro,ezequiel.castro@gmail.com,011-4593-3266,Avellaneda,2023-08-03,regular
+C027,Daniela Molina,daniela.molina@gmail.com,011-2290-2403,Vicente López,2023-02-25,regular
+C015,Pilar Jiménez,pilar.jimenez@gmail.com,011-4456-6155,Almagro,2023-11-16,regular
+C006,Nicolás García,nicolas.garcia@gmail.com,011-6514-2674,San Telmo,2023-07-04,regular
+C019,Natalia Ortiz,natalia.ortiz@gmail.com,011-2796-3504,Flores,2023-11-14,regular
+C024,Rodrigo Mendoza,rodrigo.mendoza@gmail.com,011-5889-9317,Tres de Febrero,2023-04-05,regular
+C016,Leandro Herrera,leandro.herrera@gmail.com,011-8517-3340,Núñez,2023-03-08,regular
+C010,Tomás Romero,TOMAS.ROMERO@gmail.COM,011-5741-2307,Villa Crespo,2023-02-13,premium
+C023,Micaela Flores,micaela.flores@gmail.com,011-5315-9201,Flores,2023-09-04,nuevo
+C009,Florencia Díaz,florencia.diaz@gmail.com,011-6925-4150,San Telmo,2023-01-22,premium
+C017,Antonella Medina,antonella.medina@gmail.com,011-9830-5304,Merlo,2023-07-19,regular
+C033,Emilia Cabrera,emilia.cabrera@gmail.com,011-4750-2104,Belgrano,2023-06-03,regular
+C014,Santiago Morales,santiago.morales@gmail.com,011-1916-4752,Belgrano,2023-06-13,premium
+C035,Paula Ibáñez,paula.ibañez@gmail.com,011-8744-4981,Vicente López,2023-07-07,premium
+C048,Ariel Montes,ariel.montes@gmail.com,011-7615-2964,Merlo,2023-04-19,regular
+C007,Sofía Pérez,sofia.perez@gmail.com,011-6635-5333,Belgrano,2023-12-15,regular
+C037,Valeria Ponce,valeria.ponce@gmail.com,011-1887-2612,Belgrano,2023-07-24,premium
+C040,Diego Rojas,diego.rojas@gmail.com,011-2235-8260,Lomas de Zamora,2023-02-02,regular
+C001,Lucía Fernández,lucia.fernandez@gmail.com,011-2824-1409,Núñez,2023-04-08,premium
+C001,Lucía Fernández,lucia.fernandez@gmail.com,011-2824-1409,Núñez,2023-04-08,premium
+C005,Camila Rodríguez,camila.rodriguez@gmail.com,011-1106-3615,Morón,2023-06-09,premium
+C049,Tatiana Vega,tatiana.vega@gmail.com,011-2343-7868,Merlo,2023-10-17,premium
+C021,Catalina Ramos,catalina.ramos@gmail.com,011-1188-2876,Lomas de Zamora,2023-05-25,regular
+C030,Cristian Vera,cristian.vera@gmail.com,011-6107-7537,Quilmes,2023-08-17,regular
+C020,Ramiro Vargas,ramiro.vargas@gmail.com,011-7304-7252,Tres de Febrero,2023-08-17,premium
+C042,Esteban Domínguez,esteban.dominguez@gmail.com,011-8886-4502,Lanús,2023-01-06,regular
+C043,Ailén Quiroga,ailen.quiroga@gmail.com,011-7396-5345,San Isidro,2023-05-14,regular
