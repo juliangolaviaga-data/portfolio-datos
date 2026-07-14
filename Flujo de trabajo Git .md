@@ -1,5 +1,11 @@
 # Flujo de trabajo Git — Notebook / PC Escritorio
 
+
+## Andá primero a la carpeta del repo: 
+(Esta todo configurado en esta ruta "D:\Programacion\Proyectos\portfolio-datos")
+powershell
+cd D:\Programacion\Proyectos\portfolio-datos
+
 ## Al empezar a trabajar (SIEMPRE primero)
 ```bash
 git status          # ver si hay cambios pendientes antes de bajar nada
