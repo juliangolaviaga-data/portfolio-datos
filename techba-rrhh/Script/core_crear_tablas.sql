@@ -1,4 +1,3 @@
-Prueba
 --------------------INICIO Tablas CORE--------------------
 --Armado de tablas Core para el insert de los datos
 
