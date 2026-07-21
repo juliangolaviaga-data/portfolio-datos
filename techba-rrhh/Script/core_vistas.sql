@@ -1,3 +1,4 @@
+Prueba
 ----------------------Asuentismo por empleados-----------------------
 CREATE OR REPLACE VIEW  core.ausencias_x_empleado AS
 Select
