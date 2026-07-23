@@ -63,3 +63,24 @@ actuales:
 **Excepción**: análisis exploratorios puntuales y descartables, sin destino en 
 un reporte final, pueden trabajarse directo sobre tablas — pero cualquier dato 
 que alimente un dashboard mantenido en el tiempo pasa siempre por una vista.
+
+## Nota de calidad de datos: sueldos faltantes
+
+**Hallazgo**: 8 de los empleados en `core.empleados` no tienen ningún registro 
+asociado en `core.sueldos` (de ningún `tipo`), lo que se refleja en `NULL` en 
+las columnas `moneda`, `sueldo` y `periodo_fecha` de `vw_empleados_completo`.
+
+**Causa**: no es un problema de la vista. El `LEFT JOIN` contra la subconsulta 
+de `sueldos` (que filtra por `tipo = 'Normal'` y toma el registro más reciente 
+vía `ROW_NUMBER()`) funciona correctamente — simplemente no existe ningún 
+registro de sueldo para esos 8 empleados en el origen.
+
+**Decisión**: no se generaron sueldos ficticios para completar el hueco. Se 
+mantiene como caso realista del dataset (simula altas recientes, bajas, o 
+licencias sin sueldo activo cargado).
+
+**Tratamiento en el dashboard**: se crearon columnas calculadas en DAX 
+(`Moneda Display`, `Sueldo Display`, `Periodo Display`) que muestran "Sin dato" 
+en lugar de un valor vacío en la tabla de detalle, sin afectar los campos 
+numéricos/fecha originales (que se usan intactos para KPIs y cálculos, donde 
+los blanks se excluyen automáticamente de agregaciones como `AVERAGE()`).

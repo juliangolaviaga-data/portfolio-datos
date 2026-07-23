@@ -83,18 +83,6 @@ LEFT JOIN (
     ON s.empleado_id = e.empleado_id 
     AND s.rn = 1
 
-SELECT * FROM core.sueldos WHERE empleado_id = 'E1021';
-SELECT * FROM core.sueldos WHERE empleado_id = 'E1021';
-
-SELECT COUNT(*) 
-FROM core.empleados e
-LEFT JOIN core.sueldos s ON e.empleado_id = s.empleado_id
-WHERE s.empleado_id IS NULL;
-
-SELECT view_definition 
-FROM information_schema.views 
-WHERE table_schema = 'core' AND table_name = 'vw_empleados_completo';
-
 -- 2. Bonus y ajustes por separado (histórico completo, no solo el último)
 CREATE VIEW core.vw_sueldo_bonus_ajustes AS
 SELECT
