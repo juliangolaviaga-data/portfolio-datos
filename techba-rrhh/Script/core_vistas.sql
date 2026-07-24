@@ -23,15 +23,18 @@ GROUP BY
 --ORDER BY apellido, nombre;
 ---------------------------------------------------------------------
 
-----------------------Evaluaciones por empleados-----------------------
+----------------------Evaluaciones por empleados---------------------
+DROP VIEW core.vw_valuaciones_x_empleado;
+
 CREATE OR REPLACE VIEW  core.vw_valuaciones_x_empleado AS
 select
 	em.empleado_id,
 	em.APELLIDO || ', ' || em.NOMBRE AS Empleado,
 	ev.periodo_original as Periodo,
 	ev.puntaje as Puntaje,
-	ev.categoria as Categoria
-	--e.APELLIDO || ', ' || e.NOMBRE AS Empleado,
+	ev.categoria as Categoria,
+	ev.eval_id,
+	ev.evaluador_id
 FROM core.evaluaciones ev
 JOIN core.empleados em on em.empleado_id = ev.empleado_id
 GROUP by
@@ -39,7 +42,9 @@ GROUP by
 	Empleado,
 	Periodo,
 	Puntaje,
-	Categoria
+	Categoria,
+	ev.eval_id,
+	ev.evaluador_id
 ORDER BY Empleado
 ---------------------------------------------------------------------
 
@@ -103,7 +108,8 @@ SELECT
     COUNT(e.empleado_id) AS cantidad_empleados
 FROM core.departamentos d
 LEFT JOIN core.empleados e ON e.depto_id = d.depto_id
-GROUP BY d.depto_id, d.nombre;
+GROUP BY d.depto_id, d.nombre
+order by 3 desc;;
 
 
 -- 4. Ausentismo resumen por empleado
