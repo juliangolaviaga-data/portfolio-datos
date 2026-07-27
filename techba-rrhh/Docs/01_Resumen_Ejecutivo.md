@@ -1,6 +1,6 @@
 # Resumen Ejecutivo
 
-## Descripción
+# Descripción
 
 TechBA es un proyecto de Business Intelligence que simula el proceso completo de preparación, validación y modelado de datos del área de Recursos Humanos utilizando PostgreSQL como plataforma central de procesamiento y Power BI como herramienta de visualización.
 
@@ -12,7 +12,7 @@ Toda la lógica de negocio fue implementada en PostgreSQL, permitiendo que Power
 
 # Problema
 
-La información de Recursos Humanos se encontraba distribuida en múltiples archivos independientes correspondientes a empleados, departamentos, puestos, salarios, ausentismo y evaluaciones de desempeño.
+La información de Recursos Humanos se encontraba distribuida en múltiples archivos independientes correspondientes a empleados, departamentos, puestos, sueldos, ausentismo y evaluaciones de desempeño.
 
 Esta situación dificultaba obtener indicadores confiables sobre la dotación de personal, ausentismo, remuneraciones y desempeño, obligando a realizar análisis manuales y aumentando el riesgo de inconsistencias.
 

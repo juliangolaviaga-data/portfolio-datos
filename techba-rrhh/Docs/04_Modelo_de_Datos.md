@@ -13,20 +13,15 @@ El modelo constituye la fuente oficial de información del proyecto y representa
 El modelo está compuesto por seis entidades principales.
 
 ```
-
-```
-                Departamentos
-                      │
-                      │
-                      │
-                  Empleados
-               ╱      │      ╲
-              ╱       │       ╲
-             ▼        ▼        ▼
-        Puestos   Salarios  Ausentismo
-                         │
-                         ▼
-                   Evaluaciones
+                       Departamentos
+                             │
+                             │
+                             │
+                         Empleados
+              ╱          ╱      ╲          ╲
+             ╱          ╱        ╲          ╲
+            ▼          ▼          ▼          ▼
+        Puestos    Salarios   Ausentismo  Evaluaciones
 ```
 
 ---
@@ -75,14 +70,14 @@ Se utiliza para segmentar información y enriquecer el análisis organizacional.
 
 ## Salarios
 
-Almacena la información salarial correspondiente a cada empleado.
+Almacena la información de sueldo correspondiente a cada empleado.
 
 Permite analizar:
 
-- salario actual
+- sueldo actual
 - bonos
 - ajustes
-- distribución salarial
+- distribución de sueldos
 
 ---
 

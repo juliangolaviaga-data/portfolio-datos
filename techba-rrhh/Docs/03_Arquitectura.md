@@ -11,8 +11,6 @@ Este enfoque permite construir un flujo de trabajo reproducible, mantener la ló
 # Arquitectura General
 
 ```
-
-```
                  Archivos CSV
                        │
                        ▼

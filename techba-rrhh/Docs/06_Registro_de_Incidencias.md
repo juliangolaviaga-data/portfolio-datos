@@ -2,11 +2,11 @@
 
 ## Objetivo
 
-Durante el desarrollo del proyecto se registraron todas las incidencias detectadas, junto con su análisis, resolución y estado final.
+Durante el desarrollo del proyecto se registraron todas las incidencias detectadas, junto con su análisis, resolución y resultado.
 
-Este documento forma parte de la documentación técnica del proyecto y tiene como objetivo evidenciar el proceso de validación, depuración y mejora continua aplicado durante la construcción del pipeline de datos y del modelo analítico.
+Este documento forma parte de la documentación técnica del proyecto y evidencia el proceso de validación, depuración y mejora continua aplicado durante la construcción del pipeline de datos y del modelo analítico.
 
-Las incidencias documentadas incluyen problemas relacionados con:
+Las incidencias documentadas abarcan aspectos relacionados con:
 
 - Calidad de datos.
 - Modelado relacional.
@@ -15,148 +15,237 @@ Las incidencias documentadas incluyen problemas relacionados con:
 - Integridad de la información.
 - Diseño de visualizaciones.
 
-# TechBA — Registro de Incidencias Detectadas y Corregidas
+---
 
-Este documento consolida todos los problemas identificados durante el desarrollo del proyecto TechBA (dataset ficticio de HR Analytics), junto con su diagnóstico, solución aplicada y estado actual. Sirve como evidencia de proceso técnico para el portfolio.
+# 1. Conexión y Modelado de Datos
+
+## 1.1 Columna geométrica impedía la carga en Power BI
+
+**Problema**
+
+La columna `punto_geometrico` (tipo PostGIS) de la tabla `departamentos` provocaba errores durante la importación desde Neon.
+
+**Análisis**
+
+Power BI (modo Import) no soporta de forma nativa tipos geométricos de PostGIS.
+
+**Resolución**
+
+Se excluyó la columna `punto_geometrico` del modelo y se utilizaron las columnas `latitud` y `longitud` para cualquier necesidad de representación geográfica.
+
+**Resultado**
+
+✅ Resuelto.
 
 ---
 
-## 1. Conexión y modelado de datos
+## 1.2 Relación bidireccional generaba filtrado cruzado incorrecto
 
-### 1.1 Columna geométrica rompía la carga en Power BI
-- **Problema:** la columna `punto_geometrico` (tipo PostGIS) en la tabla `departamentos` provocaba error al importar datos desde Neon.
-- **Causa:** Power BI (modo Import) no soporta de forma nativa tipos de datos geométricos de PostGIS.
-- **Solución:** se excluyó `punto_geometrico` del modelo de Power BI. Se utilizan en su lugar las columnas `latitud` y `longitud` para cualquier necesidad de mapeo.
-- **Estado:** ✅ Resuelto.
+**Problema**
 
-### 1.2 Relación bidireccional generaba cross-filtering incorrecto
-- **Problema:** la relación entre `core vw_ausentismo_resumen` y `core vw_empleados_completo` estaba configurada como bidireccional, generando filtrados cruzados no deseados entre visuales.
-- **Causa:** direccionalidad de filtro mal configurada en el modelo relacional.
-- **Solución:** se corrigió la relación a dirección única (Empleados → Ausentismo).
-- **Estado:** ✅ Resuelto.
+La relación entre `core vw_ausentismo_resumen` y `core vw_empleados_completo` estaba configurada como bidireccional.
 
-### 1.3 Relación entre `core vw_empleados_completo` y `vw_valuaciones_x_empleado` no propaga filtro correctamente
-- **Problema:** al usar la columna `Nombre Completo` (definida en `core vw_empleados_completo`) como eje de un gráfico de ranking, todos los empleados mostraban el mismo valor de `Puntaje Promedio General` (5,51), en vez de sus promedios individuales.
-- **Causa:** la relación entre ambas tablas no está filtrando correctamente el contexto de fila hacia la tabla de evaluaciones (posible relación inactiva, dirección incorrecta, o cardinalidad mal definida).
-- **Solución aplicada (paliativa):** se reemplazó `Nombre Completo` por el campo `empleado` (nombre simple), tomado directamente desde `vw_valuaciones_x_empleado`, evitando así depender de la relación entre tablas.
-- **Estado:** ⚠️ Resuelto de forma alternativa — **pendiente revisar la causa raíz de la relación**, ya que podría estar afectando otros visuales que sí dependen de ella (ej. tarjetas de "última evaluación", que solo se actualizan correctamente si la selección se hace desde la tabla Empleados y no desde la tabla Evaluaciones).
+**Análisis**
+
+La dirección del filtro provocaba propagación incorrecta entre los distintos visuales del informe.
+
+**Resolución**
+
+Se modificó la relación a dirección única (Empleados → Ausentismo).
+
+**Resultado**
+
+✅ Resuelto.
 
 ---
 
-## 2. Calidad de datos
+## 1.3 Relación entre Empleados y Evaluaciones no propagaba correctamente el contexto de filtro
 
-### 2.1 Empleados sin registro de sueldo
-- **Problema:** 8 empleados presentaban valores `NULL` en moneda, sueldo y período.
-- **Decisión:** se aceptó como caso realista de calidad de datos, sin corregir ni completar artificialmente.
-- **Solución:** se crearon columnas calculadas DAX (`Moneda Display`, `Sueldo Display`, `Periodo Display`) con fallback de texto "Sin dato" para visualización, preservando las columnas numéricas/fecha originales para KPIs y agregaciones.
-- **Transparencia:** se agregó una tarjeta en el dashboard ("Empleados sin sueldo cargado: 8") documentando el hallazgo como parte del análisis, no como defecto oculto.
-- **Estado:** ✅ Resuelto (documentado como hallazgo, no como error a ocultar).
+**Problema**
 
-### 2.2 Cardinalidad poco realista en `evaluador_id`
-- **Problema:** el campo `evaluador_id` tenía 199 evaluadores distintos, un valor poco creíble para una estructura organizacional de este tamaño.
-- **Intento de corrección:** se probó reasignar los evaluadores a un pool reducido de 27 (roles tipo Gerente RRHH / Product Manager).
-- **Decisión final:** se revirtió el cambio por decisión del usuario — se determinó que fabricar correlaciones realistas en un dataset ficticio es costoso e imperfecto.
-- **Estado:** ⚠️ No corregido — aceptado como limitación del dataset ficticio. Próximos proyectos usarán datos reales para evitar este tipo de problema.
+Al utilizar `Nombre Completo` como eje del gráfico de ranking, todos los empleados mostraban el mismo valor de puntaje promedio.
 
-### 2.3 Inconsistencia entre `categoria` y `puntaje` en evaluaciones
-- **Problema:** la columna `categoria` no correlacionaba con el `puntaje` numérico (ej. registros con categoría "Excepcional" pero puntaje de 1,70).
-- **Causa:** los datos ficticios fueron generados sin una regla de negocio consistente entre puntaje y categoría.
-- **Solución:** se ejecutó un `UPDATE` en PostgreSQL aplicando los siguientes cortes:
-  - `puntaje` ≥ 8.5 → Excepcional
-  - `puntaje` ≥ 6.5 → Bueno
-  - `puntaje` ≥ 4.5 → Regular
-  - `puntaje` < 4.5 → Bajo
-- **Control de seguridad:** se creó una columna de respaldo antes del `UPDATE`, verificada, y eliminada una vez confirmado el resultado.
-- **Estado:** ✅ Resuelto. Confirmado visualmente en la tabla de detalle de evaluaciones (categorías coherentes con puntajes tras el refresh).
+**Análisis**
 
-### 2.4 Tratamiento de datos faltantes
+La relación entre ambas vistas no propagaba correctamente el contexto de filtro. La causa raíz permanece pendiente de análisis.
 
-Durante el proceso de validación se detectaron registros con información incompleta, como empleados sin salario asignado o evaluaciones de desempeño sin puntaje.
+**Resolución**
 
-Se decidió no completar ni modificar estos valores de manera arbitraria.
+Como solución alternativa se utilizó el campo `empleado` proveniente directamente de `core vw_evaluaciones_x_empleado`, evitando depender de dicha relación.
 
-En su lugar, los registros fueron conservados y documentados como incidencias de calidad de datos.
+**Resultado**
 
-Esta decisión permite:
-
-- Mantener la integridad de la información original.
-- Evitar introducir supuestos sin respaldo funcional.
-- Reflejar un escenario realista de calidad de datos.
-- Evidenciar la importancia de definir reglas de negocio antes de transformar información.
+⚠️ Resuelto parcialmente. La solución implementada resuelve el comportamiento del visual, aunque la causa raíz continúa pendiente de revisión.
 
 ---
 
-## 3. Comportamiento de visuales en Power BI
+# 2. Calidad de Datos
 
-### 3.1 Gráfico de evolución vacío sin selección de empleado
-- **Problema:** al no haber ningún empleado seleccionado en la tabla maestro, los visuales de detalle (tabla/gráfico de evaluaciones) quedaban vacíos o poco legibles.
-- **Solución:** se reemplazó el enfoque de tabla/gráfico de línea por un set de **tarjetas de "última evaluación"** (Puntaje, Categoría, Período), que se activan y muestran datos claros únicamente cuando hay una selección activa.
-- **Estado:** ✅ Resuelto.
+## 2.1 Empleados sin registro de sueldo
 
-### 3.2 Gráfico de línea poco adecuado para pocos registros por empleado
-- **Problema:** al tener solo 3-5 evaluaciones por empleado, el gráfico de línea se veía "flojo" visualmente.
-- **Solución:** se reemplazó por gráfico de columnas con leyenda por categoría y eje Y secundario, sin etiquetas de valores.
-- **Estado:** ✅ Resuelto.
+**Problema**
 
-### 3.3 Tarjetas de última evaluación no respondían a selección desde la tabla de detalle
-- **Problema:** al seleccionar una fila en la tabla "Evaluaciones por empleado" (detalle), las tarjetas de última evaluación no se actualizaban — solo funcionaban al seleccionar desde la tabla "Empleados" (maestro).
-- **Causa:** las medidas DAX usaban `SELECTEDVALUE` únicamente sobre `core vw_empleados_completo[empleado_id]`, sin considerar selección desde la tabla de evaluaciones.
-- **Solución propuesta:** uso de `COALESCE` entre ambos posibles orígenes de selección (`core vw_empleados_completo` y `vw_valuaciones_x_empleado`) más `ALL()` para evitar que el filtro de fila limite el cálculo del "último" período.
-- **Decisión del usuario:** se revirtió el cambio, manteniendo el comportamiento original (las tarjetas responden solo a selección desde la tabla Empleados).
-- **Estado:** ⚠️ No aplicado — quedó documentada la solución técnica por si se retoma en el futuro.
+Ocho empleados no tenían información de moneda, sueldo ni período.
 
-### 3.4 Donut de distribución por categoría se filtraba al seleccionar un empleado
-- **Problema:** el gráfico de distribución de evaluaciones por categoría (donut) cambiaba sus valores al seleccionar un empleado en la tabla maestro, cuando el objetivo era que mostrara siempre el panorama general.
-- **Solución:** se utilizó la función **Editar interacciones** de Power BI, configurando la interacción de la tabla Empleados sobre el donut como "Ninguno", evitando así que el filtro de selección lo afecte.
-- **Estado:** ✅ Resuelto.
+**Análisis**
 
----
-# 5. Decisiones de Ingeniería
+No existían reglas de negocio que permitieran completar la información faltante sin introducir supuestos.
 
-## Datos faltantes
+**Resolución**
 
-Los valores nulos no fueron reemplazados automáticamente.
+Se preservaron los valores originales y se crearon columnas DAX (`Moneda Display`, `Sueldo Display` y `Periodo Display`) para mostrar el texto **"Sin dato"** únicamente en la visualización.
 
-La imputación de información requiere reglas de negocio definidas por el cliente.
+Además, se incorporó un indicador en el dashboard informando la cantidad de empleados sin sueldo registrado.
 
-En ausencia de dichas reglas, los registros fueron conservados y documentados como incidencias.
+**Resultado**
+
+ℹ️ Documentado como hallazgo de calidad de datos.
 
 ---
 
-## Lógica de negocio
+## 2.2 Cardinalidad poco realista en `evaluador_id`
 
-Toda la lógica fue implementada en PostgreSQL.
+**Problema**
 
-Power BI consume únicamente vistas analíticas.
+El campo `evaluador_id` contenía una cantidad de evaluadores poco representativa para una organización de este tamaño.
 
----
+**Análisis**
 
-## Calidad de datos
+Se evaluó reducir la cardinalidad simulando una estructura organizacional más realista.
 
-Las inconsistencias detectadas fueron registradas y clasificadas antes de construir el modelo relacional.
+Sin embargo, dicha modificación implicaba inventar reglas de negocio inexistentes.
 
----
+**Resolución**
 
-## Reproducibilidad
+Se decidió conservar los datos originales y aceptar esta limitación del conjunto de datos.
 
-El proceso completo puede repetirse siguiendo las mismas etapas de carga, validación y transformación.
+**Resultado**
 
----
-## 5. Resumen de estado general
-
-| Incidencia | Estado |
-|---|---|
-| Columna PostGIS rompía carga | ✅ Resuelto |
-| Relación bidireccional (Ausentismo) | ✅ Resuelto |
-| Relación Empleados ↔ Evaluaciones no filtra bien | ⚠️ Resuelto alternativamente / causa raíz pendiente |
-| 8 empleados sin sueldo | ✅ Resuelto (documentado como hallazgo) |
-| Cardinalidad `evaluador_id` poco realista | ⚠️ No corregido (limitación aceptada del dataset ficticio) |
-| Inconsistencia `categoria` vs `puntaje` | ✅ Resuelto |
-| Visual vacío sin selección | ✅ Resuelto |
-| Línea poco adecuada para pocos registros | ✅ Resuelto |
-| Tarjetas no responden a selección desde detalle | ⚠️ No aplicado (decisión del usuario) |
-| Donut se filtraba por selección de empleado | ✅ Resuelto |
+⚠️ Limitación aceptada.
 
 ---
 
-*Documento generado como parte de la documentación técnica del proyecto TechBA — portfolio de Julián Olaviaga.*
+## 2.3 Inconsistencia entre categoría y puntaje
+
+**Problema**
+
+La categoría asignada no guardaba relación con el puntaje obtenido.
+
+**Análisis**
+
+Los datos originales no respetaban una regla consistente entre ambas variables.
+
+**Resolución**
+
+Se implementó una regla de negocio en PostgreSQL para recalcular la categoría en función del puntaje.
+
+Antes de ejecutar el proceso se creó una columna de respaldo para verificar el resultado y garantizar la recuperación de la información en caso necesario.
+
+**Resultado**
+
+✅ Resuelto.
+
+---
+
+# 3. Comportamiento de Visuales
+
+## 3.1 Visuales de detalle sin selección de empleado
+
+**Problema**
+
+Los visuales de detalle quedaban vacíos cuando no existía un empleado seleccionado.
+
+**Análisis**
+
+La experiencia de usuario resultaba poco clara y dificultaba la interpretación del dashboard.
+
+**Resolución**
+
+Se reemplazó el enfoque inicial por un conjunto de tarjetas que muestran la última evaluación únicamente cuando existe una selección válida.
+
+**Resultado**
+
+✅ Resuelto.
+
+---
+
+## 3.2 Gráfico de línea poco representativo
+
+**Problema**
+
+Cada empleado disponía únicamente de tres a cinco evaluaciones, por lo que el gráfico de líneas no representaba adecuadamente la información.
+
+**Análisis**
+
+El volumen de datos hacía más apropiada otra visualización.
+
+**Resolución**
+
+Se descartó el gráfico de línea y se optó por mostrar el historial completo de evaluaciones (período, puntaje y categoría) en la tabla de detalle "Evaluaciones por empleado", que resulta más legible con este volumen de datos por empleado.
+
+**Resultado**
+
+✅ Resuelto.
+
+---
+
+## 3.3 Tarjetas de última evaluación no respondían a la selección desde la tabla de detalle
+
+**Problema**
+
+Las tarjetas únicamente respondían a la selección realizada desde la tabla de empleados.
+
+**Análisis**
+
+Se desarrolló una solución utilizando `COALESCE()` y `ALL()` para soportar ambos orígenes de selección.
+
+**Resolución**
+
+Se decidió mantener el comportamiento original por considerarlo más claro para el usuario final.
+
+La solución alternativa quedó documentada para futuras mejoras.
+
+**Resultado**
+
+⚠️ No implementado por decisión de diseño.
+
+---
+
+## 3.4 Donut filtrado por selección de empleado
+
+**Problema**
+
+El gráfico de distribución por categoría cambiaba al seleccionar un empleado.
+
+**Análisis**
+
+El comportamiento no representaba el objetivo del visual, que debía mostrar siempre la distribución general.
+
+**Resolución**
+
+Se configuró **Editar interacciones** en Power BI, deshabilitando el filtrado desde la tabla de empleados.
+
+**Resultado**
+
+✅ Resuelto.
+
+---
+
+# 4. Resumen Ejecutivo de Incidencias
+
+| Incidencia | Resultado |
+|------------|-----------|
+| Columna PostGIS impedía la carga | ✅ Resuelto |
+| Relación bidireccional en Ausentismo | ✅ Resuelto |
+| Relación Empleados ↔ Evaluaciones | ⚠️ Resuelto parcialmente |
+| Empleados sin sueldo registrado | ℹ️ Documentado |
+| Cardinalidad de `evaluador_id` | ⚠️ Limitación aceptada |
+| Inconsistencia categoría vs. puntaje | ✅ Resuelto |
+| Visuales vacíos sin selección | ✅ Resuelto |
+| Gráfico de línea poco representativo | ✅ Resuelto |
+| Tarjetas desde tabla de detalle | ⚠️ No implementado |
+| Donut filtrado por selección | ✅ Resuelto |
+
+---
+
+*Documento integrante de la documentación técnica del proyecto TechBA.*

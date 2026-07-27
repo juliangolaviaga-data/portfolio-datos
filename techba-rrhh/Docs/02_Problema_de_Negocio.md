@@ -32,8 +32,8 @@ El área de Recursos Humanos necesitaba disponer de información confiable para 
 
 - ¿Cuál es la dotación actual por departamento?
 - ¿Qué áreas presentan mayor ausentismo?
-- ¿Existen empleados sin información salarial?
-- ¿Cómo se distribuyen los salarios entre departamentos?
+- ¿Existen empleados sin información de sueldo?
+- ¿Cómo se distribuyen los sueldos entre departamentos?
 - ¿Cuál es el desempeño promedio por área?
 - ¿Qué empleados presentan evaluaciones pendientes?
 
