@@ -1,57 +1,48 @@
-# 09_Mejoras_Futuras.md
+---
 
-# Mejoras Futuras
+# 📋 Descripción del Proyecto
 
-## Objetivo
+TECHBA es un proyecto de Business Intelligence que demuestra el desarrollo completo de un pipeline de datos para el área de Recursos Humanos.
 
-Este documento reúne posibles líneas de evolución del proyecto para incrementar su nivel de automatización, escalabilidad y mantenibilidad.
+El proyecto abarca todo el flujo de procesamiento, desde la importación de archivos de origen hasta la generación de dashboards interactivos en Power BI, aplicando procesos de limpieza, validación, modelado relacional y preparación de datos en PostgreSQL.
 
-Las siguientes mejoras no fueron implementadas por no formar parte del alcance del proyecto.
+La arquitectura está diseñada bajo un enfoque **SQL First**, centralizando la lógica de negocio dentro de la base de datos mediante tablas de producción y vistas SQL reutilizables, permitiendo que Power BI se utilice exclusivamente como herramienta de visualización y análisis.
 
 ---
 
-# Automatización del proceso ETL
+# 🎯 Objetivos del Proyecto
 
-Automatizar la carga de archivos utilizando Python para reducir tareas manuales y facilitar la actualización periódica de la información.
-
----
-
-# Validaciones automáticas
-
-Incorporar pruebas automáticas de calidad de datos para detectar inconsistencias antes de promover la información al esquema `core`.
-
----
-
-# Orquestación
-
-Programar la ejecución del pipeline mediante herramientas de orquestación como Apache Airflow o soluciones equivalentes.
+- Diseñar un pipeline de datos reutilizable para proyectos de Business Intelligence.
+- Implementar un proceso estructurado de limpieza y validación de datos.
+- Construir un modelo relacional optimizado para análisis.
+- Centralizar la lógica de negocio en PostgreSQL.
+- Simplificar el consumo de información desde Power BI mediante vistas SQL.
+- Documentar todas las decisiones técnicas y la arquitectura del proyecto.
 
 ---
 
-# Versionado de datos
+# 🚀 Tecnologías Utilizadas
 
-Implementar estrategias de versionado para conservar históricos de información y facilitar auditorías.
-
----
-
-# Documentación automática
-
-Generar documentación técnica del modelo de datos y de las transformaciones mediante herramientas especializadas.
-
----
-
-# Escalabilidad
-
-Adaptar la arquitectura para soportar nuevas entidades relacionadas con Recursos Humanos, manteniendo la misma metodología de preparación y validación de datos.
+| Tecnología | Uso |
+|------------|-----|
+| PostgreSQL | Base de datos relacional |
+| SQL | Limpieza, transformación y consultas |
+| Power BI | Visualización y dashboards |
+| Git | Control de versiones |
+| GitHub | Gestión y publicación del proyecto |
 
 ---
 
-# Integración con nuevas fuentes
+# 📊 Resumen del Proyecto
 
-Incorporar nuevas fuentes de información, como archivos Excel, APIs o bases de datos transaccionales, reutilizando el pipeline de preparación desarrollado en este proyecto.
+| Métrica | Valor |
+|---------|------:|
+| Tablas de origen | 6 |
+| Registros procesados | ~7.350 |
+| Esquemas de la base de datos | 4 |
+| Tablas de producción | 6 |
+| Vistas SQL | 6 |
+| Páginas del Dashboard | 2 |
+| Documentos técnicos | 9 |
 
 ---
-
-# Conclusión
-
-La arquitectura implementada constituye una base sólida para futuros desarrollos y permite incorporar nuevas funcionalidades sin modificar los principios fundamentales del proyecto: centralizar la lógica de negocio en PostgreSQL, garantizar la calidad de los datos y exponer información preparada para herramientas de Business Intelligence.
