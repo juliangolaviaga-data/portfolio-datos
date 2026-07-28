@@ -15,7 +15,7 @@ La base de datos está organizada en esquemas independientes para separar respon
 | **staging** | Tablas de trabajo utilizadas para la importación, limpieza y validación de los datos. |
 | **core** | Modelo relacional final, tablas de producción y vistas SQL consumidas por Power BI. |
 | **utils** | Biblioteca de funciones y utilidades SQL reutilizables durante el desarrollo. |
-| **geo** | Esquema generado por PostgreSQL/PostGIS que almacena metadatos espaciales (`geometry_columns`). No forma parte del pipeline analítico. |
+| **geo** | Esquema de PostGIS utilizado para tipar la columna `punto_geometrico` en `core.departamentos`. No se expone a Power BI: para reporting geográfico se usan `latitud`/`longitud` en su lugar (ver incidente 1.1 en `06_Registro_de_Incidencias.md`). |
 
 ---
 

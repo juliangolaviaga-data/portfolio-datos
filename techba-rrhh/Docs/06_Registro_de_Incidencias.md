@@ -71,7 +71,7 @@ La relación entre ambas vistas no propagaba correctamente el contexto de filtro
 
 **Resolución**
 
-Como solución alternativa se utilizó el campo `empleado` proveniente directamente de `core vw_evaluaciones_x_empleado`, evitando depender de dicha relación.
+Como solución alternativa se utilizó el campo `empleado` proveniente directamente de `core vw_valuaciones_x_empleado`, evitando depender de dicha relación.
 
 **Resultado**
 

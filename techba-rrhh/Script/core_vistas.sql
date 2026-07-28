@@ -49,7 +49,7 @@ ORDER BY Empleado
 ---------------------------------------------------------------------
 
 -- 1. Empleados completo (sueldo normal más reciente)
-DROP VIEW core.vw_empleados_completo;
+DROP VIEW IF EXISTS core.vw_empleados_completo;
 
 CREATE OR REPLACE VIEW core.vw_empleados_completo AS
 SELECT 
