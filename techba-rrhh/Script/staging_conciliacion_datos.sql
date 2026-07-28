@@ -180,7 +180,7 @@ WHERE s.sueldo_id IS NOT NULL AND TRIM(s.sueldo_id) != '';
 -- IMPORTANTE: este bloque de abajo es solo UN ejemplo (una columna).
 -- Para cubrir la tabla completa, agregar un UNION ALL por cada columna
 -- que pase por una función de limpieza -- ese es el reporte completo
--- (mismo patrón que ya armamos a mano para staging.ausentismo).
+-- (mismo patrón que ya se arma a mano para staging.ausentismo).
 -- ------------------------------------------------------------
 SELECT '[columna_fecha]' AS columna_analizada,
        utils.clasificar_conversion(s.[columna_fecha], utils.limpiar_fecha_generica(s.[columna_fecha])) AS estado_fecha,
@@ -547,10 +547,8 @@ WHERE utils.limpiar_precio(s.[columna_metrica]) IS NOT NULL
   AND NOT utils.numero_en_rango(utils.limpiar_precio(s.[columna_metrica]), [minimo_esperado], [maximo_esperado]);
  
 -- Qué esperar: 0 filas en ambos. Si aparece algo, no es un NULL --
--- es un valor que "parece" válido pero está fuera de lo razonable
--- para ese campo (ej. sueldo de $50.000.000 en vez de $500.000).
--- Definir [minimo_esperado]/[maximo_esperado] según el contexto real
--- de cada columna (rango salarial del sector, fechas desde que existe
+-- es un valor que "parece" válido pero está fuera de lo razonable para ese campo (ej. sueldo de $50.000.000 en vez de $500.000).
+-- Definir [minimo_esperado]/[maximo_esperado] según el contexto real de cada columna (rango salarial del sector, fechas desde que existe
 -- la empresa hasta hoy, etc.).
  
 SELECT s.[columna_pk], s.[columna_telefono], utils.limpiar_telefono(s.[columna_telefono]) AS telefono_convertido
@@ -559,7 +557,7 @@ WHERE utils.limpiar_telefono(s.[columna_telefono]) IS NOT NULL
   AND NOT utils.telefono_en_rango(utils.limpiar_telefono(s.[columna_telefono]));
 
 --Qué esperar: 0 filas. Si aparece algo, es un teléfono que "sobrevivió" la limpieza (no dio NULL, 
---pasó el Control 3 sin problema) pero tiene una cantidad de dígitos poco creíble — muy corto (typo, dato incompleto) 
+--pasó el Control 3 sin problema) pero tiene una cantidad de dígitos poco creíble — muy corto (tipo, dato incompleto) 
 --o muy largo (concatenación accidental de dos números, o de un DNI).
 
 SELECT s.[columna_pk], s.[columna_periodo], utils.periodo_extraer_anio(s.[columna_periodo]) AS anio_extraido

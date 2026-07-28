@@ -82,9 +82,7 @@ LEFT JOIN (
             PARTITION BY empleado_id 
             ORDER BY periodo_fecha DESC 
         ) AS rn 
-    FROM core.sueldos 
-    WHERE tipo = 'Normal' 
-) s 
+    FROM core.sueldos WHERE tipo = 'Normal') s 
     ON s.empleado_id = e.empleado_id 
     AND s.rn = 1
 
