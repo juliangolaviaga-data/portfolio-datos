@@ -1,5 +1,5 @@
 ----------------------Asuentismo por empleados-----------------------
-DROP VIEW core.vw_ausencias_x_empleado;
+DROP VIEW IF EXISTS core.vw_ausencias_x_empleado;
 
 CREATE OR REPLACE VIEW core.vw_ausencias_x_empleado AS
 SELECT
@@ -24,7 +24,7 @@ GROUP BY
 ---------------------------------------------------------------------
 
 ----------------------Evaluaciones por empleados---------------------
-DROP VIEW core.vw_valuaciones_x_empleado;
+DROP VIEW IF EXISTS core.vw_valuaciones_x_empleado;
 
 CREATE OR REPLACE VIEW  core.vw_valuaciones_x_empleado AS
 select
@@ -87,7 +87,7 @@ LEFT JOIN (
     AND s.rn = 1
 
 -- 2. Bonus y ajustes por separado (histórico completo, no solo el último)
-CREATE VIEW core.vw_sueldo_bonus_ajustes AS
+CREATE OR REPLACE VIEW core.vw_sueldo_bonus_ajustes AS
 SELECT
     empleado_id,
     periodo_fecha,
@@ -99,7 +99,7 @@ WHERE tipo IN ('Bonus', 'Ajuste');
 
 
 -- 3. Dotación por departamento
-CREATE VIEW core.vw_dotacion_departamento AS
+CREATE OR REPLACE VIEW core.vw_dotacion_departamento AS
 SELECT
     d.depto_id,
     d.nombre AS departamento,
@@ -107,11 +107,11 @@ SELECT
 FROM core.departamentos d
 LEFT JOIN core.empleados e ON e.depto_id = d.depto_id
 GROUP BY d.depto_id, d.nombre
-order by 3 desc;;
+order by 3 desc;
 
 
 -- 4. Ausentismo resumen por empleado
-CREATE VIEW core.vw_ausentismo_resumen AS
+CREATE OR REPLACE VIEW core.vw_ausentismo_resumen AS
 SELECT
     empleado_id,
     COUNT(*) AS cantidad_eventos,

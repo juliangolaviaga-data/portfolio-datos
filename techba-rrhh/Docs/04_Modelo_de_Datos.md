@@ -6,6 +6,17 @@ El modelo de datos de TechBA fue diseñado para consolidar la información del �
 
 El modelo constituye la fuente oficial de información del proyecto y representa la capa sobre la que se construyen todas las vistas analíticas utilizadas por Power BI.
 
+# Arquitectura de la Base de Datos
+
+La base de datos está organizada en esquemas independientes para separar responsabilidades y facilitar el mantenimiento del proyecto.
+
+| Esquema | Descripción |
+|---------|-------------|
+| **staging** | Tablas de trabajo utilizadas para la importación, limpieza y validación de los datos. |
+| **core** | Modelo relacional final, tablas de producción y vistas SQL consumidas por Power BI. |
+| **utils** | Biblioteca de funciones y utilidades SQL reutilizables durante el desarrollo. |
+| **geo** | Esquema generado por PostgreSQL/PostGIS que almacena metadatos espaciales (`geometry_columns`). No forma parte del pipeline analítico. |
+
 ---
 
 # Arquitectura del Modelo
