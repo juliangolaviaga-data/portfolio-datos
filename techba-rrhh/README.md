@@ -54,7 +54,7 @@ El proyecto implementa un pipeline de datos organizado en capas, donde cada etap
 El flujo comienza con la importación de los archivos de origen hacia un entorno de trabajo (*staging*), continúa con las tareas de limpieza, validación y transformación de los datos, para luego consolidar un modelo relacional de producción (*core*). Finalmente, las vistas SQL sirven como fuente única de información para Power BI, evitando duplicar lógica de negocio en la herramienta de visualización.
 
 <p align="center">
-  <img src="images/arquitectura.png" width="100%">
+  <img src="Images/arquitectura.png" width="100%">
 </p>
 
 ---
@@ -110,11 +110,11 @@ El dashboard fue desarrollado en Power BI utilizando como única fuente de datos
 Toda la lógica de transformación y preparación de los datos se implementó previamente en PostgreSQL, permitiendo que Power BI se utilice exclusivamente para la exploración visual y el análisis de indicadores.
 
 <p align="center">
-    <img src="images/dashboard_01.png" width="100%">
+    <img src="Images/dashboard_01.png" width="100%">
 </p>
 
 <p align="center">
-    <img src="images/dashboard_02.png" width="100%">
+    <img src="Images/dashboard_02.png" width="100%">
 </p>
 
 ---
@@ -126,7 +126,7 @@ El modelo relacional fue diseñado para garantizar la integridad de la informaci
 La separación entre las tablas de trabajo (*staging*) y las tablas de producción (*core*) permite mantener un proceso de carga y transformación organizado, reutilizable y fácil de mantener.
 
 <p align="center">
-    <img src="images/modelo_datos.png" width="100%">
+    <img src="Images/modelo_datos.png" width="100%">
 </p>
 
 ---
