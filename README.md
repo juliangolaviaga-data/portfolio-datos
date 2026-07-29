@@ -1,73 +1,316 @@
-# Portfolio de Datos — Julián
+::: {align="center"}
+# TECHBA --- Human Resources Data Pipeline
 
-**Data Analyst / Analytics Engineer** · Córdoba, Argentina
+### Pipeline ETL y Arquitectura SQL para Business Intelligence en Recursos Humanos
 
-SQL-first. PostgreSQL como motor de modelado y transformación, Power BI como capa de visualización sobre datos ya preparados.
+Desde archivos de origen hasta dashboards analíticos en Power BI
+utilizando PostgreSQL y Neon.
 
-[LinkedIn](https://www.linkedin.com/in/julian-olaviaga-0b9329385) · [Workana](https://www.workana.com/freelancer/ec9769ac6e5b2321c25e71f03e372a13) · [juliangolaviaga@gmail.com](mailto:juliangolaviaga@gmail.com)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Neon](https://img.shields.io/badge/Neon-00E599?style=for-the-badge)
+![Power
+BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![SQL](https://img.shields.io/badge/SQL-025E8C?style=for-the-badge)
+:::
 
----
+------------------------------------------------------------------------
 
-## Sobre este portfolio
-
-Cada proyecto acá adentro sigue el mismo pipeline end-to-end: **datos crudos → staging → diagnóstico → limpieza SQL → modelado relacional → capa de exposición → dashboard en Power BI**. No son ejercicios de "conectar un CSV a un gráfico": el trabajo pesado —limpieza, reglas de negocio, integridad de datos, arquitectura del modelo— pasa en SQL, y Power BI entra recién al final, sobre datos que ya están confiables.
-
-Esto refleja cómo trabajo en la práctica: como analista con background en desarrollo de software, priorizo que la lógica viva en un lugar versionable, testeable y reutilizable (la base de datos) antes que en fórmulas de Power Query o medidas DAX dispersas por el modelo.
-
----
-
-## Proyectos
-
-| # | Proyecto | Dataset | Foco técnico | Estado |
-|---|---|---|---|---|
-| 1 | [**FashionStore**](./FashionStore) | E-commerce de moda (ficticio) | Diagnóstico y limpieza de datos crudos reales: fechas en 7 formatos distintos, categorías inconsistentes, duplicados, valores inválidos. SQL avanzado (CTEs, window functions, columnas generadas) | ✅ Completo |
-| 2 | [**TechBA**](./TechBA) | HR Analytics (ficticio) | Arquitectura de datos gobernada: capa de exposición exclusiva vía vistas (`core` schema), PostgreSQL en Neon, manejo de datos faltantes con transparencia, modelo relacional más complejo | ✅ Completo |
-| 3 | *Próximo proyecto* | Dataset real (Kaggle u otra fuente pública) | — | 🔜 Planeado |
-
-Los proyectos están ordenados cronológicamente a propósito: **FashionStore es el punto de partida** (demuestra que puedo llevar un dataset sucio del mundo real hasta un dashboard confiable) y **TechBA ya incorpora más gobernanza y disciplina arquitectónica** (reglas explícitas sobre cómo se expone el dato, documentación de gaps de calidad como activo, no como falla). La idea es que este portfolio siga creciendo con esa misma progresión: cada proyecto nuevo debería sumar una capa de complejidad o una herramienta que el anterior no tenía — no repetir el mismo ejercicio con otro dataset.
-
-El próximo proyecto va a usar **datos reales** (no ficticios) para mostrar manejo de problemas de calidad que no se pueden diseñar a mano.
-
----
-
-## Stack tecnológico
-
-- **PostgreSQL** — modelado, limpieza, transformación, vistas
-- **DBeaver** — cliente SQL para diagnóstico y desarrollo
-- **Power BI Desktop** — modelado semántico y visualización (Import mode)
-- **Power Query (M)** — transformaciones complementarias sobre datos ya limpios en SQL
-- **DAX** — medidas de negocio sobre el modelo ya preparado
-
----
-
-## Principios de trabajo
-
-Estas son las reglas que sigo en todos los proyectos de este repo, no solo en uno:
-
-- **La lógica de negocio vive en SQL, no en DAX ni en Power Query.** Power BI consume datos ya modelados y limpios; su trabajo es visualizar, no transformar.
-- **Transparencia de calidad de datos.** Los gaps, nulos o inconsistencias que aparecen en un dataset real se documentan y se muestran — no se esconden ni se rellenan con valores inventados. Un `NULL` explícito es más honesto que un promedio disfrazado de dato.
-- **Cada decisión de limpieza tiene una justificación de negocio explícita**, documentada junto al código SQL que la implementa.
-- **La capa de exposición hacia BI está controlada.** A medida que los proyectos maduran, la tendencia es exponer datos vía vistas (nunca tablas base) para centralizar la lógica y controlar qué ve cada herramienta consumidora.
-- **Todo es reproducible.** Cada proyecto documenta su pipeline completo (scripts SQL, decisiones, datasets crudos) para que el proceso se pueda auditar o repetir, no solo el resultado final.
-
----
-
-## Estructura del repo
-
+```{=html}
+<p align="center">
 ```
-/
-├── README.md                    ← estás acá
-├── FashionStore/
-│   ├── README.md                 ← documentación del proyecto
-│   ├── datos_crudos/
-│   ├── sql/
-│   └── dashboard/
-├── TechBA/
-│   ├── README.md
-│   ├── datos_crudos/
-│   ├── sql/
-│   └── dashboard/
-└── (próximos proyectos)/
+`<img src="Images/dashboard_01.png" width="100%">`{=html}
+```{=html}
+</p>
 ```
 
-Cada carpeta de proyecto tiene su propio `README.md` con el detalle técnico completo: origen de datos, problemas encontrados, decisiones de limpieza, modelo relacional, vistas, medidas DAX y resultados. Este README raíz es solo la puerta de entrada.
+------------------------------------------------------------------------
+
+# 📋 Descripción del Proyecto
+
+TECHBA es un proyecto de Business Intelligence que demuestra el
+desarrollo completo de un pipeline de datos para el área de Recursos
+Humanos.
+
+El proyecto abarca todo el flujo de procesamiento, desde la importación
+de archivos de origen hasta la generación de dashboards interactivos en
+Power BI, aplicando procesos de limpieza, validación, modelado
+relacional y preparación de datos en PostgreSQL.
+
+La arquitectura está diseñada bajo un enfoque **SQL First**,
+centralizando la lógica de negocio dentro de la base de datos mediante
+tablas de producción y vistas SQL reutilizables, permitiendo que Power
+BI se utilice exclusivamente como herramienta de visualización y
+análisis.
+
+------------------------------------------------------------------------
+
+# 📊 Resumen del Proyecto
+
+  Métrica                                Valor
+  ---------------------------------- ---------
+  **Tablas de origen**                       6
+  **Registros procesados**             \~7.350
+  **Esquemas de la base de datos**           4
+  **Tablas de producción**                   6
+  **Vistas SQL**                             6
+  **Páginas del Dashboard**                  2
+  **Documentos técnicos**                    9
+
+------------------------------------------------------------------------
+
+# 🚀 Plataforma
+
+  Componente             Tecnología
+  ---------------------- -----------------
+  Base de datos          Neon PostgreSQL
+  Motor SQL              PostgreSQL
+  Visualización          Power BI
+  Control de versiones   Git
+  Repositorio            GitHub
+
+------------------------------------------------------------------------
+
+# 🛠️ Tecnologías y Conceptos Aplicados
+
+-   ETL
+-   Data Cleaning
+-   Data Validation
+-   Modelado Relacional
+-   SQL Views
+-   Business Intelligence
+-   Arquitectura SQL First
+
+------------------------------------------------------------------------
+
+# 🏗️ Arquitectura del Pipeline
+
+El proyecto implementa un pipeline de datos organizado en capas, donde
+cada etapa cumple una responsabilidad específica dentro del proceso de
+preparación de la información.
+
+El flujo comienza con la importación de los archivos de origen hacia un
+entorno de trabajo (**staging**), continúa con las tareas de limpieza,
+validación y transformación de los datos, para luego consolidar un
+modelo relacional de producción (**core**). Finalmente, las vistas SQL
+sirven como fuente única de información para Power BI, evitando duplicar
+lógica de negocio en la herramienta de visualización.
+
+```{=html}
+<p align="center">
+```
+`<img src="Images/arquitectura.png" width="100%">`{=html}
+```{=html}
+</p>
+```
+
+------------------------------------------------------------------------
+
+# 🗂️ Organización de la Base de Datos
+
+La base de datos se encuentra organizada en esquemas independientes para
+separar responsabilidades y facilitar el mantenimiento del proyecto.
+
+  -----------------------------------------------------------------------
+  Esquema                        Descripción
+  ------------------------------ ----------------------------------------
+  **staging**                    Área de trabajo donde se importan,
+                                 limpian y validan los datos provenientes
+                                 de los archivos de origen.
+
+  **core**                       Contiene el modelo relacional
+                                 definitivo, las tablas de producción y
+                                 las vistas SQL utilizadas por Power BI.
+
+  **utils**                      Biblioteca de funciones y utilidades SQL
+                                 reutilizables desarrolladas durante el
+                                 proyecto.
+
+  **geo**                        Esquema generado por PostGIS que
+                                 almacena metadatos espaciales del
+                                 sistema. No participa del flujo
+                                 analítico.
+  -----------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# 🗄️ Modelo de Datos
+
+El modelo relacional fue diseñado para garantizar la integridad de la
+información mediante claves primarias, claves foráneas y relaciones
+normalizadas.
+
+La separación entre las tablas de trabajo (**staging**) y las tablas de
+producción (**core**) permite mantener un proceso de carga y
+transformación organizado, reutilizable y fácil de mantener.
+
+```{=html}
+<p align="center">
+```
+`<img src="Images/modelo_datos.png" width="100%">`{=html}
+```{=html}
+</p>
+```
+
+------------------------------------------------------------------------
+
+# 💻 Implementación SQL
+
+Una de las principales decisiones de arquitectura del proyecto fue
+centralizar la lógica de negocio dentro de PostgreSQL.
+
+Los scripts SQL están organizados por etapas del pipeline (creación de
+esquemas, limpieza, conciliación, modelado y vistas analíticas),
+permitiendo un proceso reproducible, reutilizable y fácil de mantener.
+
+### Ejemplo de Script SQL
+
+```{=html}
+<p align="center">
+```
+`<img src="Images/SQL_2.png" width="100%">`{=html}
+```{=html}
+</p>
+```
+### Vista SQL utilizada por Power BI
+
+```{=html}
+<p align="center">
+```
+`<img src="Images/sql_view_02.png" width="100%">`{=html}
+```{=html}
+</p>
+```
+Las vistas SQL del esquema **core** son consumidas directamente por
+Power BI, evitando transformaciones complejas en la herramienta de
+visualización y manteniendo una única fuente de verdad dentro de la base
+de datos.
+
+------------------------------------------------------------------------
+
+# 📊 Dashboard
+
+El dashboard fue desarrollado en Power BI utilizando exclusivamente las
+vistas SQL del esquema **core**, manteniendo toda la lógica de
+transformación y preparación de datos dentro de PostgreSQL.
+
+```{=html}
+<p align="center">
+```
+`<img src="Images/dashboard_01.png" width="100%">`{=html}
+```{=html}
+</p>
+```
+```{=html}
+<p align="center">
+```
+`<img src="Images/dashboard_02.png" width="100%">`{=html}
+```{=html}
+</p>
+```
+
+------------------------------------------------------------------------
+
+# 📁 Estructura del Proyecto
+
+La estructura del proyecto está organizada para separar los archivos de
+origen, los scripts SQL, la documentación técnica y los recursos
+visuales utilizados durante el desarrollo del pipeline.
+
+``` text
+techba-rrhh/
+│
+├── Archivos_Bruto/
+│
+├── Script/
+│   ├── crear_esquemas.sql
+│   ├── staging_limpieza_datos.sql
+│   ├── staging_conciliacion_datos.sql
+│   ├── core_crear_tablas.sql
+│   └── core_vistas.sql
+│
+├── Docs/
+│   ├── 01_Resumen_Ejecutivo.md
+│   ├── 02_Problema_de_Negocio.md
+│   ├── 03_Arquitectura.md
+│   ├── 04_Modelo_de_Datos.md
+│   ├── 05_Preparacion_y_Calidad_de_Datos.md
+│   ├── 06_Registro_de_Incidencias.md
+│   ├── 07_Dashboard_y_Resultados.md
+│   ├── 08_Decisiones_de_Arquitectura.md
+│   └── 09_Mejoras_Futuras.md
+│
+├── Images/
+│   ├── arquitectura.png
+│   ├── arquitectura.svg
+│   ├── dashboard_01.png
+│   ├── dashboard_02.png
+│   ├── modelo_datos.png
+│   ├── SQL_2.png
+│   └── sql_view_02.png
+│
+└── README.md
+```
+
+------------------------------------------------------------------------
+
+# 📚 Documentación Técnica
+
+El proyecto incluye documentación técnica detallada que describe cada
+etapa del desarrollo, desde la definición del problema hasta las
+decisiones de arquitectura implementadas.
+
+  --------------------------------------------------------------------------------------------------------------------------
+  Documento                                                                           Descripción
+  ----------------------------------------------------------------------------------- --------------------------------------
+  [01_Resumen_Ejecutivo.md](Docs/01_Resumen_Ejecutivo.md)                             Resumen general del proyecto y sus
+                                                                                      objetivos.
+
+  [02_Problema_de_Negocio.md](Docs/02_Problema_de_Negocio.md)                         Contexto y necesidad analítica del
+                                                                                      área de Recursos Humanos.
+
+  [03_Arquitectura.md](Docs/03_Arquitectura.md)                                       Diseño de la arquitectura del pipeline
+                                                                                      y organización del flujo de datos.
+
+  [04_Modelo_de_Datos.md](Docs/04_Modelo_de_Datos.md)                                 Modelo relacional, esquemas y
+                                                                                      relaciones entre entidades.
+
+  [05_Preparacion_y_Calidad_de_Datos.md](Docs/05_Preparacion_y_Calidad_de_Datos.md)   Procesos de limpieza, estandarización
+                                                                                      y validación de datos.
+
+  [06_Registro_de_Incidencias.md](Docs/06_Registro_de_Incidencias.md)                 Problemas encontrados y soluciones
+                                                                                      aplicadas durante el desarrollo.
+
+  [07_Dashboard_y_Resultados.md](Docs/07_Dashboard_y_Resultados.md)                   Métricas, visualizaciones y resultados
+                                                                                      obtenidos.
+
+  [08_Decisiones_de_Arquitectura.md](Docs/08_Decisiones_de_Arquitectura.md)           Justificación de las principales
+                                                                                      decisiones técnicas del proyecto.
+
+  [09_Mejoras_Futuras.md](Docs/09_Mejoras_Futuras.md)                                 Posibles extensiones y evolución
+                                                                                      futura del pipeline.
+  --------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# 👨‍💻 Autor
+
+**Julián Olaviaga**
+
+Especialista en procesamiento y análisis de datos, enfocado en
+arquitectura SQL, PostgreSQL y preparación de datos para Business
+Intelligence.
+
+-   GitHub: https://github.com/juliangolaviaga-data
+-   LinkedIn: *(agregar enlace cuando esté actualizado)*
+
+------------------------------------------------------------------------
+
+```{=html}
+<p align="center">
+```
+`<b>`{=html}TECHBA --- Human Resources Data
+Pipeline`</b>`{=html}`<br>`{=html} Arquitectura SQL First • PostgreSQL •
+Neon • Power BI
+```{=html}
+</p>
+```
