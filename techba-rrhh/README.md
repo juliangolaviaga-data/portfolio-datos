@@ -19,6 +19,7 @@ La arquitectura está diseñada bajo un enfoque **SQL First**, centralizando la 
 | Visualización | Power BI |
 | Control de versiones | Git |
 | Repositorio | GitHub |
+
 ---
 
 # 🛠️ Tecnologías y Conceptos Aplicados
@@ -68,7 +69,7 @@ La base de datos se encuentra organizada en esquemas independientes para separar
 | **staging** | Área de trabajo donde se importan, limpian y validan los datos provenientes de los archivos de origen. |
 | **core** | Contiene el modelo relacional definitivo, las tablas de producción y las vistas SQL utilizadas por Power BI. |
 | **utils** | Biblioteca de funciones y utilidades SQL reutilizables desarrolladas durante el proyecto. |
-| **geo** | Esquema generado por PostGIS que almacena metadatos espaciales del sistema. No participa del flujo analítico. |
+| **geo** | Esquema de PostGIS utilizado para tipar la columna `punto_geometrico` en `core.departamentos`. No se expone a Power BI: para reporting geográfico se usan `latitud`/`longitud` en su lugar (ver incidente 1.1 en `Docs/06_Registro_de_Incidencias.md`). |
 
 ---
 
@@ -101,6 +102,7 @@ Limpieza y validación
         ▼
  Dashboards Analíticos
 ```
+
 ---
 
 # 📊 Dashboard
