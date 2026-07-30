@@ -227,7 +227,8 @@ El proyecto incluye documentación técnica detallada que describe cada etapa de
 Especialista en procesamiento y análisis de datos, enfocado en arquitectura SQL, PostgreSQL y preparación de datos para Business Intelligence.
 
 - GitHub: https://github.com/juliangolaviaga-data
-- LinkedIn: *(agregar enlace cuando esté actualizado)*
+- LinkedIn: www.linkedin.com/in/julian-olaviaga-0b9329385
+- Workana: https://www.workana.com/freelancer/ec9769ac6e5b2321c25e71f03e372a13
 
 ---
 
