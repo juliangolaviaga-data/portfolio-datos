@@ -1,10 +1,12 @@
 <div align="center">
 
-# Portfolio de Datos
+# Julián Olaviaga
 
-### Analytics Engineering · PostgreSQL · SQL · Business Intelligence
+### Data Analyst / Analytics Engineer
 
-Transformación de datos, modelado relacional y preparación de información para análisis y toma de decisiones.
+**SQL & PostgreSQL | ETL | Data Modeling | Power BI**
+
+Preparación, transformación y modelado de datos para análisis y Business Intelligence, con foco en pipelines SQL reproducibles y arquitecturas basadas en PostgreSQL/MySQL, preparando la información la toma de decisiones.
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Neon](https://img.shields.io/badge/Neon-00E599?style=for-the-badge)
